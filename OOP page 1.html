@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SarawakVibe</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Sarawak.svg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 204, 0.9);
+      width: 300px;
+      max-height: 400px;
+      margin: 100px auto;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      border-bottom: 1px solid #333;
+    }
+
+    .area-list {
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .area-item {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .area-item:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .area-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Welcome To SarawakVibe!<br>Select Your Area</div>
+    <div class="area-list">
+      <div class="area-item">Kuching</div>
+      <div class="area-item">Sibu</div>
+      <div class="area-item">Bintulu</div>
+      <div class="area-item">Miri</div>
+      <div class="area-item">Sri Aman</div>
+      <div class="area-item">Sarikei</div>
+      <div class="area-item">Mukah</div>
+      <div class="area-item">Limbang</div>
+      <div class="area-item">Betong</div>
+      <div class="area-item">Kapit</div>
+      <div class="area-item">Samarahan</div>
+      <div class="area-item">Serian</div>
+    </div>
+  </div>
+
+  <script>
+    // Optional: Add a click event to each area
+    document.querySelectorAll('.area-item').forEach(item => {
+      item.addEventListener('click', () => {
+        alert('You selected ' + item.textContent);
+      });
+    });
+  </script>
+</body>
+</html>
