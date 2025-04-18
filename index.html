@@ -87,3 +87,12 @@
   </script>
 </body>
 </html>
+
+<script>
+  document.querySelectorAll('.area-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const area = item.textContent.trim().toLowerCase(); // e.g., "kuching"
+      window.location.href = area + '.html'; // goes to kuching.html
+    });
+  });
+</script>
