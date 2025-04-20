@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Province Details</title>
   <style>
@@ -94,7 +94,8 @@
     const provinceContent = document.getElementById('provinceContent');
 
     if (province) {
-      document.getElementById('provinceTitle').textContent = province.charAt(0).toUpperCase() + province.slice(1);
+      document.getElementById('provinceTitle').textContent =
+        province.charAt(0).toUpperCase() + province.slice(1);
     }
 
     function goBack() {
@@ -125,18 +126,20 @@
       };
 
       const prefix = prefixMap[province.toLowerCase()] || 'kch';
-      const fileName = `${province.toLowerCase()}_${type}.json`;
       const imagePrefix = typeMap[type] || type.slice(0, 3);
+      const jsonFile = `${province.toLowerCase()}_${type}.json`;
 
       let html = `<h2>${province.toUpperCase()} - ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>`;
 
       try {
-        const response = await fetch(fileName);
+        const response = await fetch(jsonFile);
         if (!response.ok) throw new Error("File not found");
         const places = await response.json();
 
         places.forEach((place, index) => {
-          const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
+          // 👇 This is the line you're asking about
+          const imageUrl = `https://raw.githubusercontent.com/carol123/sarawak-site/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
+
           html += `
             <div class="place">
               <img src="${imageUrl}" alt="${place.name}" />
