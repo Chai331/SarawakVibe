@@ -91,14 +91,17 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const province = urlParams.get('name');
-    document.getElementById('provinceTitle').textContent = province.charAt(0).toUpperCase() + province.slice(1);
+    const provinceContent = document.getElementById('provinceContent');
+
+    if (province) {
+      document.getElementById('provinceTitle').textContent = province.charAt(0).toUpperCase() + province.slice(1);
+    }
 
     function goBack() {
       window.location.href = 'index.html';
     }
 
     async function showContent(type) {
-      const contentBox = document.getElementById('provinceContent');
       const prefixMap = {
         'sri aman': 'sri',
         'sarikei': 'sar',
@@ -115,26 +118,35 @@
       };
 
       const prefix = prefixMap[province.toLowerCase()] || 'kch';
-      const imageCount = 10;
+      const jsonFile = `${province.toLowerCase()}_${type}.json`;
+
       let html = `<h2>${province.toUpperCase()} - ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>`;
 
-      const response = await fetch(`${province.toLowerCase()}_${type}.json`);
-      const places = await response.json();
+      try {
+        const response = await fetch(jsonFile);
+        if (!response.ok) throw new Error("File not found");
+        const places = await response.json();
 
-      places.forEach((place, index) => {
-        html += `
-          <div class="place">
-            <img src="https://your-github-repo-path/${prefix}${type.slice(0,3)}${index+1}.jpg" alt="${place.name}" />
-            <h3>${place.name}</h3>
-            <p><strong>${place.features ? 'Features' : 'Description'}:</strong> ${place.features || place.description}</p>
-            <p><strong>Address:</strong> ${place.address}</p>
-            <p><strong>Business Hours:</strong> ${place.businessHours}</p>
-            <p><strong>Contact:</strong> ${place.contact}</p>
-          </div>
-        `;
-      });
+        places.forEach((place, index) => {
+          const imageUrl = `https://raw.githubusercontent.com/your-username/your-repo/main/images/${prefix}${type.slice(0,3)}${index + 1}.jpg`;
+          html += `
+            <div class="place">
+              <img src="${imageUrl}" alt="${place.name}" />
+              <h3>${place.name}</h3>
+              <p><strong>${place.features ? 'Features' : 'Description'}:</strong> ${place.features || place.description}</p>
+              <p><strong>Address:</strong> ${place.address}</p>
+              <p><strong>Business Hours:</strong> ${place.businessHours}</p>
+              <p><strong>Contact:</strong> ${place.contact}</p>
+            </div>
+          `;
+        });
 
-      contentBox.innerHTML = html;
+      } catch (err) {
+        html += `<p style="color:red;">⚠ Unable to load ${type} info. Please check if the JSON file exists or the name is correct.</p>`;
+        console.error("Fetch error:", err);
+      }
+
+      provinceContent.innerHTML = html;
     }
   </script>
 </body>
