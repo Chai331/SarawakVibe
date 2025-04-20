@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Wonderboom",
+      "features": "Spacious and airy space with floor-to-ceiling windows, plush cushions, and long tables. Includes a private room for up to 20 people.",
+      "address": "Level 1, 129, Lorong Lapangan Terbang 2, Green Heights, 93250 Kuching, Sarawak",
+      "businessHours": "9:30 AM – 11:00 PM, Daily",
+      "contact": "082-571 396"
+    },
+    {
+      "name": "James Brooke Bistro & Cafe",
+      "features": "Colonial-style riverside dining with Western and local dishes. Famous for beef rendang and Sarawak laksa pizza.",
+      "address": "Waterfront, Jalan Tun Abang Haji Openg, 93000 Kuching",
+      "businessHours": "10:00 AM – 10:30 PM, Daily",
+      "contact": "+60 82-412 120"
+    },
+    {
+      "name": "The Junk",
+      "features": "Eclectic decor with Asian-Western fusion dishes. Must-try: Black pepper steak and salted egg pasta.",
+      "address": "80, Wayang Street, 93100 Kuching",
+      "businessHours": "12:00 PM – 10:30 PM (Closed Sundays)",
+      "contact": "+60 82-259 450"
+    },
+    {
+      "name": "Zinc Restaurant & Bar",
+      "features": "Industrial-chic vibe with craft cocktails and gourmet burgers. Live music on weekends.",
+      "address": "68, Wayang Street, 93100 Kuching",
+      "businessHours": "5:00 PM – 1:00 AM (Weekends until 2:00 AM)",
+      "contact": "+60 82-244 266"
+    },
+    {
+      "name": "Lepau Restaurant",
+      "features": "Authentic Dayak cuisine in a traditional longhouse setting. Try the bamboo chicken and jungle ferns.",
+      "address": "Lot 319, Ban Hock Road, 93100 Kuching",
+      "businessHours": "11:00 AM – 2:30 PM, 6:00 PM – 10:00 PM",
+      "contact": "+60 19-879 3168"
+    },
+    {
+      "name": "Sin Chong Choon Cafe",
+      "features": "Legendary Sarawak laksa spot with rich, aromatic broth. Arrive early to avoid queues.",
+      "address": "801-1B Jalan Datuk Bandar Mustapha, Green Heights, 93350 Kuching, Sarawak",
+      "businessHours": "6:30 AM – 1:30 PM",
+      "contact": "-"
+    },
+    {
+      "name": "Bla Bla Bla",
+      "features": "Artistic ambiance with creative Peranakan-inspired dishes. Signature: 3-layer tea pork ribs.",
+      "address": "27, Jalan Tabuan, 93100 Kuching",
+      "businessHours": "6:00 PM – 12:00 AM, Daily",
+      "contact": "+60 82-233 944"
+    },
+    {
+      "name": "The Granary",
+      "features": "Modern gastropub with craft beers and fusion tapas. Try their laksa carbonara.",
+      "address": "72, Jalan Wayang, 93100 Kuching",
+      "businessHours": "10:00 AM – 11:00 PM (Weekends until midnight)",
+      "contact": "+60 82-246 246"
+    },
+    {
+      "name": "Rumah Asap",
+      "features": "Specializes in smoked Dayak meats and traditional jungle produce.",
+      "address": "Jalan Penrissen, 93250 Kuching",
+      "businessHours": "11:00 AM – 10:00 PM, Daily",
+      "contact": "+60 16-866 3168"
+    },
+    {
+      "name": "The Dyak",
+      "features": "Rooftop seafood haven with fresh catches cooked to order. Famous for butter prawns and chili crab.",
+      "address": "94, Main Bazaar, 93000 Kuching",
+      "businessHours": "11:00 AM – 10:00 PM (Closed Mondays)",
+      "contact": "+60 82-234 568"
+    }
+  ]
