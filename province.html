@@ -136,7 +136,7 @@
         const places = await response.json();
 
         places.forEach((place, index) => {
-          const imageUrl = `https://raw.githubusercontent.com/your-username/your-repo/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
+          const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
           html += `
             <div class="place">
               <img src="${imageUrl}" alt="${place.name}" />
