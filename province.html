@@ -117,18 +117,26 @@
         'kuching': 'kch'
       };
 
+      const typeMap = {
+        restaurant: 'res',
+        shopping: 'shop',
+        accommodation: 'hotel',
+        attraction: 'att'
+      };
+
       const prefix = prefixMap[province.toLowerCase()] || 'kch';
-      const jsonFile = `${province.toLowerCase()}_${type}.json`;
+      const fileName = `${province.toLowerCase()}_${type}.json`;
+      const imagePrefix = typeMap[type] || type.slice(0, 3);
 
       let html = `<h2>${province.toUpperCase()} - ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>`;
 
       try {
-        const response = await fetch(jsonFile);
+        const response = await fetch(fileName);
         if (!response.ok) throw new Error("File not found");
         const places = await response.json();
 
         places.forEach((place, index) => {
-          const imageUrl = `https://raw.githubusercontent.com/your-username/your-repo/main/images/${prefix}${type.slice(0,3)}${index + 1}.jpg`;
+          const imageUrl = `https://raw.githubusercontent.com/your-username/your-repo/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
           html += `
             <div class="place">
               <img src="${imageUrl}" alt="${place.name}" />
@@ -151,3 +159,4 @@
   </script>
 </body>
 </html>
+
