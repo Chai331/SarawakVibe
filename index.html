@@ -63,30 +63,28 @@
   <div class="container">
     <div class="header">Welcome To SarawakVibe!<br>Select Your Area</div>
     <div class="area-list">
-      <div class="area-item" data-link="kuching.html">Kuching</div>
-      <div class="area-item" data-link="sibu.html">Sibu</div>
-      <div class="area-item" data-link="bintulu.html">Bintulu</div>
-      <div class="area-item" data-link="miri.html">Miri</div>
-      <div class="area-item" data-link="sriaman.html">Sri Aman</div>
-      <div class="area-item" data-link="sarikei.html">Sarikei</div>
-      <div class="area-item" data-link="mukah.html">Mukah</div>
-      <div class="area-item" data-link="limbang.html">Limbang</div>
-      <div class="area-item" data-link="betong.html">Betong</div>
-      <div class="area-item" data-link="kapit.html">Kapit</div>
-      <div class="area-item" data-link="samarahan.html">Samarahan</div>
-      <div class="area-item" data-link="serian.html">Serian</div>
+      <div class="area-item" data-name="kuching">Kuching</div>
+      <div class="area-item" data-name="sibu">Sibu</div>
+      <div class="area-item" data-name="bintulu">Bintulu</div>
+      <div class="area-item" data-name="miri">Miri</div>
+      <div class="area-item" data-name="sriaman">Sri Aman</div>
+      <div class="area-item" data-name="sarikei">Sarikei</div>
+      <div class="area-item" data-name="mukah">Mukah</div>
+      <div class="area-item" data-name="limbang">Limbang</div>
+      <div class="area-item" data-name="betong">Betong</div>
+      <div class="area-item" data-name="kapit">Kapit</div>
+      <div class="area-item" data-name="samarahan">Samarahan</div>
+      <div class="area-item" data-name="serian">Serian</div>
     </div>
   </div>
 
   <script>
     document.querySelectorAll('.area-item').forEach(item => {
       item.addEventListener('click', () => {
-        const page = item.getAttribute('data-link');
-        window.location.href = page;
+        const provinceName = item.getAttribute('data-name');
+        window.location.href = `province.html?name=${provinceName}`;
       });
     });
   </script>
-</body>
-</html>
 </body>
 </html>
