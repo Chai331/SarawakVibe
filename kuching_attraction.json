@@ -1,0 +1,37 @@
+[
+    {
+      "name": "Borneo Cultures Museum",
+      "description": "Malaysia’s largest museum, showcasing Sarawak’s rich cultural heritage and indigenous artifacts.",
+      "address": "Jalan Tun Abang Haji Openg, 93400 Kuching, Sarawak, Malaysia",
+      "businessHours": "9:00 AM – 4:45 PM, Daily",
+      "contact": "+60 82-370 704"
+    },
+    {
+      "name": "Sarawak Cultural Village",
+      "description": "A 'Living Museum' with authentic longhouses and cultural performances representing Sarawak's ethnic groups.",
+      "address": "Pantai Damai, Santubong, 93752 Kuching, Sarawak",
+      "businessHours": "9:00 AM – 5:00 PM, Daily",
+      "contact": "+60 82-846 108"
+    },
+    {
+      "name": "Kuching Cat Museum",
+      "description": "Celebrates Kuching's feline identity with over 4,000 cat-related exhibits.",
+      "address": "Bangunan DBKU, Jalan Semariang, Petra Jaya, 93050 Kuching, Sarawak",
+      "businessHours": "9:00 AM – 5:00 PM, Daily",
+      "contact": "+60 82-512 200"
+    },
+    {
+      "name": "Semenggoh Wildlife Centre",
+      "description": "A rehabilitation center for semi-wild orangutans, best visited during feeding times.",
+      "address": "Jalan Tun Abang Haji Openg, 93250 Kuching, Sarawak",
+      "businessHours": "8:00 AM – 10:00 AM & 2:00 PM – 4:00 PM, Daily",
+      "contact": "+60 82-618 325"
+    },
+    {
+      "name": "Jong's Crocodile Farm and Zoo",
+      "description": "Malaysia’s largest crocodile farm, also home to other animals and exhibits.",
+      "address": "Jalan Kuching-Serian, Siburan, 93250 Kuching, Sarawak",
+      "businessHours": "9:00 AM – 5:00 PM, Daily",
+      "contact": "+60 82-242 790"
+    }
+  ]
