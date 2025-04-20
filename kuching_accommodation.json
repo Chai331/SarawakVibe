@@ -1,0 +1,37 @@
+[
+    {
+      "name": "The Waterfront Hotel",
+      "features": "Located in the city center near the Sarawak River, within walking distance to historic streets and museums. Cozy rooms and friendly service.",
+      "address": "Main Bazaar, 93100 Kuching, Sarawak, Malaysia",
+      "businessHours": "24 hours",
+      "contact": "+60 82-222 777"
+    },
+    {
+      "name": "Hilton Kuching",
+      "features": "Luxury hotel with an outdoor pool, fitness center, and multiple dining options. Close to the waterfront park.",
+      "address": "1 Jalan Tunku Abdul Rahman, 93100 Kuching, Sarawak, Malaysia",
+      "businessHours": "24 hours",
+      "contact": "082-223 888"
+    },
+    {
+      "name": "Pullman Kuching",
+      "features": "Modern design with luxurious accommodations and on-site restaurants. Ideal for business travelers and families.",
+      "address": "1A Jalan Mathies, 93100 Kuching, Sarawak, Malaysia",
+      "businessHours": "24 hours",
+      "contact": "+60 82-222 888"
+    },
+    {
+      "name": "Grand Margherita Hotel",
+      "features": "Overlooks the Sarawak River with an outdoor pool, restaurants, and bars. Popular with families and business guests.",
+      "address": "Jalan Tunku Abdul Rahman, 93100 Kuching, Sarawak, Malaysia",
+      "businessHours": "24 hours",
+      "contact": "+60 82-423 111"
+    },
+    {
+      "name": "The LimeTree Hotel",
+      "features": "Chic boutique hotel with affordable rates. Walkable to food streets and shopping areas.",
+      "address": "Jalan Padungan, 93100 Kuching, Sarawak, Malaysia",
+      "businessHours": "24 hours",
+      "contact": "+60 82-414 600"
+    }
+  ]
