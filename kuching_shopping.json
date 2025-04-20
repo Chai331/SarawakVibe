@@ -1,0 +1,37 @@
+[
+    {
+      "name": "The Spring Shopping Mall",
+      "description": "A premier shopping destination offering a wide range of international and local brands, diverse dining options, and entertainment facilities including a cinema.",
+      "address": "Jalan Simpang Tiga, 93300 Kuching, Sarawak, Malaysia",
+      "businessHours": "Daily, 10:00 AM – 10:00 PM",
+      "contact": "+60 82-238 111"
+    },
+    {
+      "name": "Vivacity Megamall",
+      "description": "Currently the largest mall in Kuching, featuring international clothing brands, two food courts, playgrounds, and an IMAX cinema.",
+      "address": "Jalan Wan Alwi, 93350 Kuching, Sarawak, Malaysia",
+      "businessHours": "Daily, 10:00 AM – 10:00 PM",
+      "contact": "+60 82-266 666"
+    },
+    {
+      "name": "AEON Mall Kuching Central",
+      "description": "A modern shopping mall with diverse retail outlets, dining options, and entertainment facilities.",
+      "address": "Jalan Tun Ahmad Zaidi Adruce, 93200 Kuching, Sarawak, Malaysia",
+      "businessHours": "Sun–Thu: 10:00 AM – 10:00 PM; Fri–Sat & Eve of PH: 10:00 AM – 10:30 PM",
+      "contact": "+60 82-521 936"
+    },
+    {
+      "name": "Boulevard Shopping Mall",
+      "description": "A comprehensive mall with a wide range of retail stores, eateries, and entertainment options.",
+      "address": "Jalan Datuk Tawi Sli, 93250 Kuching, Sarawak, Malaysia",
+      "businessHours": "Daily, 10:00 AM – 9:30 PM",
+      "contact": "+60 82-457 800"
+    },
+    {
+      "name": "Plaza Merdeka",
+      "description": "A spacious mall featuring domestic and international retailers, fast-food chains, and a kids' play area near historical sites.",
+      "address": "88 Pearl Street, 93000 Kuching, Sarawak, Malaysia",
+      "businessHours": "Daily, 10:00 AM – 10:00 PM",
+      "contact": "+60 82-239 136"
+    }
+  ]
