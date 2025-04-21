@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Regent Hotel",
+    "features": "Comfortable 3-star hotel near Tanjung Batu Beach with free Wi-Fi and 24-hour front desk. Halal-friendly and close to attractions.",
+    "address": "Lot 166-169, Kemena Commercial Centre, Jalan Ria 3, Tanjung Batu, Bintulu",
+    "businessHours": "24 hours",
+    "contact": "+60 82-412 120"
+  },
+  {
+    "name": "Sentral View Hotel Bintulu",
+    "features": "Adults-only hotel with city views, free parking, bar, and fitness center. Rated 8.2/10 for cleanliness and convenience.",
+    "address": "No. 1, Jalan Masjid, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-244 266"
+  },
+  {
+    "name": "Goldenbay Hotel Bintulu",
+    "features": "Luxury hotel near the airport with restaurant, bar, airport shuttle, fitness center, and family rooms.",
+    "address": "Lot 157, Jalan Tun Ahmad Zaidi Adruce, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-246 246"
+  },
+  {
+    "name": "New World Suites",
+    "features": "Modern suites connected to Parkcity Mall with sea or city views. Includes free Wi-Fi, halal dining, and fitness center.",
+    "address": "Level 5, Parkcity Mall, Jalan Tun Hussein Onn, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-259 450"
+  },
+  {
+    "name": "Amigo Hotel Bintulu",
+    "features": "Family-friendly hotel with garden, restaurant, bar, and free Wi-Fi. Highly rated for its warm atmosphere.",
+    "address": "No. 1, Jalan Abang Galau, Medan Jaya, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-233 944"
+  },
+  {
+    "name": "Kemena Plaza Hotel",
+    "features": "Hotel with indoor pool, restaurant, and free Wi-Fi. Located near commercial areas, ideal for business stays.",
+    "address": "Lot 318, Block 10, Jalan Tun Ahmad Zaidi Adruce, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-318 304"
+  },
+  {
+    "name": "Athome Boutique Hotel",
+    "features": "Stylish boutique hotel with chic bar, breakfast, and free Wi-Fi. Centrally located.",
+    "address": "No. 1, Jalan Somerville, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-338 575"
+  },
+  {
+    "name": "Fairfield by Marriott Bintulu Paragon",
+    "features": "Upscale hotel with fitness center, free bike service, and concierge. Caters to business and leisure travelers.",
+    "address": "No. 1, Jalan Tanjung Kidurong, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-429 277"
+  },
+  {
+    "name": "Greens Hotel & Suites",
+    "features": "Spacious family rooms next to Commerce Square Mall. Walkable distance to Parkcity Mall.",
+    "address": "Lot 236, Block 10, Jalan Tun Ahmad Zaidi Adruce, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-338 575"
+  },
+  {
+    "name": "WIWO Hotel",
+    "features": "Budget-friendly hotel with family rooms and on-site restaurant. 2.4 km from Tanjung Batu Beach.",
+    "address": "No. 1, Jalan Tanjung Batu, 97000 Bintulu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 82-318 304"
+  }
+]
