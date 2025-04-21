@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Roxy Hotel Serian",
+    "features": "A modern 3-star hotel offering free Wi-Fi, a restaurant, air-conditioned rooms with city views, and event facilities like the Cha Cha Ballroom.",
+    "address": "No. 5, Lot 1348, Serian Piazza, Jalan Datuk Michael Ben, 94700 Serian, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 82-876 888"
+  },
+  {
+    "name": "Serian Transit Inn",
+    "features": "Offers family rooms and free parking, located approximately 400 meters from Serian town center.",
+    "address": "Jalan Serian-Tebedu, 94700 Serian, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 82-876 888"
+  },
+  {
+    "name": "Family Inn Serian",
+    "features": "A centrally located inn offering comfortable accommodations near the town center.",
+    "address": "Bandar Serian, 94700 Serian, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "082-891 666"
+  },
+  {
+    "name": "Kpg Pichin Homestay",
+    "features": "A homestay located in the Serian Division, offering local hospitality.",
+    "address": "94700 Serian, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "013-820 2670"
+  },
+  {
+    "name": "SM Homestay Kampung Hulu",
+    "features": "A homestay providing accommodations in Kampung Hulu.",
+    "address": "Kampung Hulu, 94700 Serian, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 13-800 4388"
+  },
+  {
+    "name": "Senawi Guesthouse Gedong",
+    "features": "A guesthouse located along Jalan Serian - Sri Aman.",
+    "address": "322, Jalan Serian - Sri Aman, Kampung Munggul Limo, 94700 Serian, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "017-805 5904"
+  },
+  {
+    "name": "B&B Homestay Kampung Pesang",
+    "features": "A homestay located in Kampung Pesang, offering accommodations in a village setting.",
+    "address": "No. 8, Lorong 6, Jalan Padawan, Kampung Pesang, 94200 Serian, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 16-874 7481"
+  }
+]
