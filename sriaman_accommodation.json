@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Seri Simanggang Hotel",
+    "features": "3-star hotel with restaurant, family rooms, free WiFi, and 24-hour front desk.",
+    "address": "Lot 1518, Block 2, Plot 49, Simanggang Town District, Simanggang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 83-322 699"
+  },
+  {
+    "name": "Roxy Hotel Sri Aman",
+    "features": "Air-conditioned rooms with bidet and free WiFi. Staff fluent in English, Malay, and Chinese.",
+    "address": "6F99+P5, Kampung Muhibbah, 95007 Simanggang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 83-324 514"
+  },
+  {
+    "name": "Mega Inn Sri Aman",
+    "features": "1-star hotel with free WiFi, 24-hour front desk, and family-friendly rooms.",
+    "address": "1704-1708, Jalan Durian, Pekan Sri Aman, 95000 Simanggang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 83-326 998"
+  },
+  {
+    "name": "Viva Hotel Sri Aman",
+    "features": "3-star hotel with 24-hour front desk and family-friendly services.",
+    "address": "Jalan Abang Aing, Block D, Sublot 7-8, Lot 1660, Block 2, Simanggang Town District, 95000 Simanggang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 18-975 9028"
+  },
+  {
+    "name": "OYO 90400 Good View Inn",
+    "features": "2-star hotel with air-conditioning, satellite TV, fridge, free WiFi, and private bathrooms.",
+    "address": "Lot 1907, 1908, Jalan Serian, 95000 Simanggang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 3-5037 8296"
+  },
+  {
+    "name": "Cassava Homestay - Rumah Santai",
+    "features": "Homestay with terrace, balcony, bar, air-conditioned rooms, and garden views.",
+    "address": "620, Jalan Buntu, Temudok, 95000 Simanggang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 12-234 0967"
+  },
+  {
+    "name": "Place2Stay @ Sri Aman",
+    "features": "Hotel near Hospital Sri Aman with 45 rooms, free parking, WiFi, and LCD TVs.",
+    "address": "Jalan Bayu, 95000 Sri Aman, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 83-321 661"
+  },
+  {
+    "name": "Ons Hostel",
+    "features": "Hostel with shared kitchen, free internet, and non-smoking rooms. Parking available.",
+    "address": "1st & 2nd Floor, SL9 Parent Lot 1524, Block 3, Simanggang Town District, 95000 Sri Aman, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 13-597 9755"
+  },
+  {
+    "name": "Theatre Inn",
+    "features": "Guesthouse with free internet, parking, and smoke-free rooms near Pekan Sri Aman.",
+    "address": "106, Jalan Club, Pekan Sri, 95000 Sri Aman, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 83-323 122"
+  },
+  {
+    "name": "WOODHOUSE",
+    "features": "Bungalow-style stay with air-conditioned rooms, free parking, and tea/coffee amenities.",
+    "address": "No. 5, Jalan Datuk Tawi Sli, 95000 Simanggang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 14-593 6665"
+  }
+]
