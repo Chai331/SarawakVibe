@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Ranchan Recreational Park (Ranchan Pool)",
+    "features": "A popular spot featuring a picturesque waterfall, picnic areas, and walking trails amidst lush greenery. Ideal for family outings and nature enthusiasts.",
+    "address": "Approximately 5 km from Serian town center",
+    "businessHours": "Open daily",
+    "contact": "Free entry"
+  },
+  {
+    "name": "Silabur Cave",
+    "features": "A limestone cave known for its impressive stalactites and stalagmites. Adventurous visitors can explore its chambers and enjoy the surrounding forest.",
+    "address": "Near Kampung Lobang Batu, about 30 minutes from Serian town",
+    "businessHours": "Guided access recommended",
+    "contact": "Entry fee may apply"
+  },
+  {
+    "name": "Simuja Waterfall",
+    "features": "A serene waterfall nestled in the forest, offering a tranquil setting for relaxation.",
+    "address": "Approximately 7 km from Serian town",
+    "businessHours": "Accessible via short hike",
+    "contact": "Free entry"
+  }
+]
