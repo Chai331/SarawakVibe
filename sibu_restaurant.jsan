@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Sibu Central Market",
+      "features": "Best for Sarawak laksa, kompia (local bread), and kampua noodles.",
+      "address": "Jalan Channel, 96000 Sibu, Sarawak",
+      "businessHours": "6:00 AM – 6:00 PM (Daily)",
+      "contact": "-"
+    },
+    {
+      "name": "Hai Choo Seafood Restaurant",
+      "features": "Specializes in fresh river and sea seafood (try the midin belacan or butter crab).",
+      "address": "Lot 1089, Jalan Pedada, 96000 Sibu, Sarawak",
+      "businessHours": "10:00 AM – 10:00 PM (Daily)",
+      "contact": "+60 12-888 1188"
+    },
+    {
+      "name": "Payung Café",
+      "features": "Offers a fusion of Borneo and Southeast Asian cuisines, including dishes like Belimbing Prawns and Kacama Chicken.",
+      "address": "No. 20F, Lanang Road, 96000 Sibu, Sarawak",
+      "businessHours": "Daily, 10:30 AM – 10:00 PM",
+      "contact": "016-893 7614"
+    },
+    {
+      "name": "Cabe Ijo",
+      "features": "Specializes in Malay and Indonesian dishes such as Ayam Penyet and Daging Masak Hitam.",
+      "address": "No. 71 & 73, Lorong Kuda 2, Kampung Nangka, 96000 Sibu, Sarawak",
+      "businessHours": "10:00 AM – 10:00 PM",
+      "contact": "016-899 1395"
+    },
+    {
+      "name": "Outright Coffee",
+      "features": "A cozy café serving Western dishes, desserts, and unique beverages like Beetroot Red Latte.",
+      "address": "24B, Jalan Lau King Howe, 96000 Sibu, Sarawak",
+      "businessHours": "Daily, 7:00 AM – 11:00 PM",
+      "contact": "084-255 420"
+    },
+    {
+      "name": "Opps Kopitiam",
+      "features": "Offers a variety of local breakfast items, noodles, rice dishes, and snacks at reasonable prices.",
+      "address": "No. 38, Jalan Keranji, 96000 Sibu, Sarawak",
+      "businessHours": "Monday–Saturday, 7:30 AM – 5:00 PM",
+      "contact": "-"
+    },
+    {
+      "name": "Junction Café & Restaurant",
+      "features": "Serves a mix of Asian and Western dishes in a family-friendly environment.",
+      "address": "3 Lorong Wong King Huo, 96000 Sibu, Sarawak",
+      "businessHours": "Monday–Saturday, 8:00 AM – 2:00 PM & 5:00 PM – 9:30 PM",
+      "contact": "016-899 5441"
+    },
+    {
+      "name": "The Kitchen BBQ & Steamboat",
+      "features": "Offers buffet-style BBQ and steamboat dining, ideal for group gatherings.",
+      "address": "19, Jalan Pipit, Pekan Sibu, 96000 Sibu, Sarawak",
+      "businessHours": "Daily, 4:00 PM – 8:00 PM",
+      "contact": "010-213 6552"
+    },
+    {
+      "name": "Hong Fu Seafood",
+      "features": "Renowned for fresh seafood dishes, including crab and prawns, served in a traditional Chinese seafood restaurant ambiance",
+      "address": "Jalan Wong King Huo, 96000 Sibu, Sarawak",
+      "businessHours": "Monday, 5:00 PM – 10:00 PM; Tuesday–Thursday, 10:00 AM – 9:30 PM; Friday–Sunday, 9:00 AM – 10:30 PM,
+      "contact": "084-318 181"
+    },
+    {
+      "name": "Famous Town Food House",
+      "features": "Offers a variety of Malaysian dishes, including:Sarawak Laksa (both soup and fried versions),Kampua Mee,Fried Mee Mamak,Fried Wantan,Fried Laksa Mee Hoon",
+      "address": "No. 34, Ground Floor, Jalan Wawasan, 96000 Sibu, Sarawak, Malaysia",
+      "businessHours": "06:00 AM - 02:00 PM",
+      "contact": "013-808 5051"
+    }
+  ]
