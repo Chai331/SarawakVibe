@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Nova Hotel Miri",
+    "features": "Modern 2-star hotel with air-conditioned rooms, private bathrooms, free WiFi, room service, and 24-hour front desk.",
+    "address": "Lot 1016, Block 9, Jalan Brooke, Miri Concession Land District, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-322 555"
+  },
+  {
+    "name": "Meritz Hotel",
+    "features": "Located next to Bintang Megamall with outdoor pool, 4 dining options, and central city access.",
+    "address": "Bintang Megamall, Jalan Miri-Pujut, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-417 888"
+  },
+  {
+    "name": "Amigo Hotel",
+    "features": "Family-friendly hotel near Imperial Mall with air-conditioned rooms and free WiFi.",
+    "address": "Lot 2026, Block MCLD, Marina Park, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "03-2857 3999"
+  },
+  {
+    "name": "Dynasty Hotel Miri",
+    "features": "Hotel with sauna, steam room, restaurant, and free WiFi. Close to shopping and dining areas.",
+    "address": "Lot 683, Block 9, Jalan Miri-Pujut, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-421 111"
+  },
+  {
+    "name": "Kenyalang Suite",
+    "features": "2-star hotel with air-conditioned rooms and free WiFi. Close to San Qing Tien Temple and Lambir Hills.",
+    "address": "Lot 2113, Edward Jeli Road off Krokop 10, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "03-5037 8296"
+  },
+  {
+    "name": "Kingsley Hotel",
+    "features": "Hotel with free WiFi, private parking, and in-house restaurant. Near Bintang Plaza and Imperial Mall.",
+    "address": "LOT 2167, Jalan Sylvia MCLD, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-423 988"
+  },
+  {
+    "name": "Chemara Boutique Hotel",
+    "features": "Boutique hotel with restaurant and air-conditioned rooms. Close to Boulevard Shopping Complex.",
+    "address": "Lot 1436 & 1437, Block 1, Off Jalan Pasar Lutong, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-663 666"
+  },
+  {
+    "name": "Walk Inn",
+    "features": "Budget inn near Bintang Plaza and Imperial Mall with private parking available.",
+    "address": "Lot 1819, Merbau Road, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "012-994 5678"
+  },
+  {
+    "name": "Citi Hotel",
+    "features": "2-star hotel with airport shuttle, room service, and free WiFi. Close to Boulevard Shopping Complex.",
+    "address": "Lot 2350, Block 17, KBLD, Jalan Cahaya, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-325 600"
+  },
+  {
+    "name": "Residence 21 Boutique Inn",
+    "features": "Boutique inn with concierge, WiFi, and modern rooms. Walking distance to Bintang Plaza and Imperial Mall.",
+    "address": "2141, Lee Tak Street, 98000 Miri, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-411 180"
+  }
+]
