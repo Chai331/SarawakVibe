@@ -1,0 +1,23 @@
+[
+  {
+    "name": "La Promenade Mall",
+    "features": "A modern lifestyle mall featuring a variety of retail outlets, dining options, a supermarket, and office spaces. It is part of the La Promenade mixed development by Hock Seng Lee Berhad.",
+    "address": "No.1, HSL Tower, Lorong La Promenade 2, Kuching-Samarahan Expressway, 94300 Kota Samarahan, Sarawak, Malaysia.",
+    "businessHours": "Daily, 9:30 AM – 9:30 PM",
+    "contact": "019-816 8866"
+  },
+  {
+    "name": "The Summer Shopping Mall",
+    "features": "The first shopping mall in Kota Samarahan, offering a range of retail shops, dining options, and entertainment facilities. It houses tenants like Emart Supermarket and Parkson Department Store",
+    "address": "Lot 7455, Block 1, Jalan Datuk Mohammad Musa, 94300 Kota Samarahan, Sarawak, Malaysia",
+    "businessHours": "10:00 AM – 10:00 PM",
+    "contact": "082-673448"
+  },
+  {
+    "name": "Aiman Mall",
+    "features": "Halal Indian Muslim restaurant known for rich and spicy mutton curry; also offers naan and other Indian dishes.",
+    "address": "94300 Kota Samarahan, Sarawak",
+    "businessHours": "08:00 AM – 10:00 PM",
+    "contact": "-"
+  }
+]
