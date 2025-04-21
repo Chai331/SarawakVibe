@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Similajau National Park",
+    "features": "Coastal park with golden beaches, mangrove forests, and wildlife like crocodiles and dolphins. Ideal for hiking and beach picnics.",
+    "address": "Approximately 30 km northeast of Bintulu town",
+    "businessHours": "8:00 AM – 5:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Pantai Temasya Tanjung Batu",
+    "features": "Popular beach with walkways, playgrounds, BBQ spots, and beautiful sunset views.",
+    "address": "Within Bintulu town",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Tua Pek Kong Temple",
+    "features": "One of the oldest Chinese temples in Bintulu with intricate carvings and statues. Culturally significant.",
+    "address": "Near the old town of Bintulu",
+    "businessHours": "7:00 AM – 6:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Taman Tumbina (Bintulu Botanical & Zoological Garden)",
+    "features": "Zoo and botanical garden showcasing local flora and fauna. Family-friendly and educational.",
+    "address": "Overlooking the South China Sea, Bintulu",
+    "businessHours": "8:00 AM – 5:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Masjid Assyakirin (Bintulu Mosque)",
+    "features": "Modern mosque with a waterfall feature and landscaped gardens. A place of worship and architectural interest.",
+    "address": "In the heart of Bintulu town",
+    "businessHours": "Open for prayer times",
+    "contact": "-"
+  },
+  {
+    "name": "Kuan Yin Tong Temple",
+    "features": "Temple dedicated to the Goddess of Mercy, featuring a rock garden, dragon fence, and man-made waterfall.",
+    "address": "Approximately 2 km from Bintulu city center on Jalan Sultan Iskandar",
+    "businessHours": "8:00 AM – 6:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Pasar Tamu Bintulu",
+    "features": "Traditional-style market under a Melanau cone roof. Great for local produce and cultural immersion.",
+    "address": "Next to Pasar Utama, across the riverfront",
+    "businessHours": "7:00 AM – 5:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Pulau Batu Mandi",
+    "features": "Small scenic island popular for boat excursions and nature photography.",
+    "address": "Accessible by boat from Bintulu",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Taman Millenium",
+    "features": "Public park with jogging tracks, green spaces, and playgrounds. Perfect for family outings.",
+    "address": "Within Bintulu town",
+    "businessHours": "6:00 AM – 10:00 PM (Daily)",
+    "contact": "-"
+  }
+]
