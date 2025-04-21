@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sibu</title>
+  <style>
+    .restaurant-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .restaurant-card img {
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+    }
+    #restaurant-detail img {
+      width: 100px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body style="background-color: lightyellow; font-family: Arial;">
+
+  <h1>Welcome to Sibu!</h1>
+  <a href="index.html">← Back to main page</a>
+
+  <button onclick="backToList()" id="back-btn" style="display: none;">← Back to list</button>
+
+  <div id="restaurant-list"></div>
+  <div id="restaurant-detail" style="display: none;"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('sibu_restaurant.json')
+        .then(response => response.json())
+        .then(data => {
+          window._restaurants = data;
+          displayRestaurantList(data);
+        });
+    });
+
+    function displayRestaurantList(restaurants) {
+      const listContainer = document.getElementById('restaurant-list');
+      listContainer.innerHTML = '';
+      restaurants.forEach((res, index) => {
+        const card = document.createElement('div');
+        card.className = 'restaurant-card';
+        card.innerHTML = `
+          <img src="images/${res.image}" alt="${res.name}">
+          <p onclick="showDetail(${index})"><strong>${res.name}</strong></p>
+        `;
+        listContainer.appendChild(card);
+      });
+    }
+
+    function showDetail(index) {
+      const res = window._restaurants[index];
+      const detailContainer = document.getElementById('restaurant-detail');
+      detailContainer.innerHTML = `
+        <h2>${res.name}</h2>
+        <div style="display: flex;">
+          ${res.images.map(img => `<img src="images/${img}" alt="${res.name}">`).join('')}
+        </div>
+        <p><strong>Introduction:</strong> ${res.description}</p>
+        <p><strong>Location:</strong> ${res.location}</p>
+        <p><strong>Business Hours:</strong><br>
+          ${Object.entries(res.hours).map(([day, time]) => `${day}: ${time}`).join('<br>')}
+        </p>
+        <p><strong>Contact:</strong><br>${res.contact.join('<br>')}</p>
+        <a href="#">Rate and comment</a>
+      `;
+
+      document.getElementById('restaurant-list').style.display = 'none';
+      detailContainer.style.display = 'block';
+      document.getElementById('back-btn').style.display = 'block';
+    }
+
+    function backToList() {
+      document.getElementById('restaurant-detail').style.display = 'none';
+      document.getElementById('restaurant-list').style.display = 'block';
+      document.getElementById('back-btn').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
