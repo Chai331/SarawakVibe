@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Fort Alice",
+    "features": "Built in 1864 after the Brooke Rajahs' victory over Iban warrior Rentap, now a museum preserving colonial relics and history.",
+    "address": "Jalan Fort Alice, 95000 Sri Aman, Sarawak",
+    "businessHours": "9:00 AM – 5:00 PM (Daily)",
+    "contact": "+60 83-321 200"
+  },
+  {
+    "name": "Batang Lupar River & Tidal Bore (Pesta Benak)",
+    "features": "Famous for the tidal bore phenomenon and the annual Pesta Benak festival with cultural events.",
+    "address": "Sri Aman Waterfront, 95000 Sri Aman, Sarawak",
+    "businessHours": "Accessible at all times; tidal bore timings vary",
+    "contact": "+60 83-321 200"
+  },
+  {
+    "name": "Batang Ai National Park",
+    "features": "Lush rainforest with orangutans and hornbills, featuring an artificial lake and access to longhouses by boat.",
+    "address": "Lubok Antu, 95900 Sri Aman, Sarawak",
+    "businessHours": "8:00 AM – 5:00 PM (Daily)",
+    "contact": "+60 82-610 088"
+  },
+  {
+    "name": "Masjid Bandar Sri Aman",
+    "features": "A central mosque with serene ambiance and distinct Islamic architecture.",
+    "address": "Jalan Masjid, 95000 Sri Aman, Sarawak",
+    "businessHours": "Open for prayer times; visitors welcome outside prayer hours",
+    "contact": "+60 83-321 200"
+  },
+  {
+    "name": "Taman Panorama Benak",
+    "features": "Park with scenic river views, walkways, and a relaxing environment to observe tidal bore waves.",
+    "address": "Jalan Taman Panorama, 95000 Sri Aman, Sarawak",
+    "businessHours": "6:00 AM – 10:00 PM (Daily)",
+    "contact": "+60 83-321 200"
+  },
+  {
+    "name": "Sri Aman Waterfront",
+    "features": "A riverside promenade ideal for relaxing walks and tidal bore watching along Batang Lupar River.",
+    "address": "Jalan Waterfront, 95000 Sri Aman, Sarawak",
+    "businessHours": "Open 24 hours",
+    "contact": "+60 83-321 200"
+  },
+  {
+    "name": "Sri Aman Sports Complex",
+    "features": "Public sports facility with stadium and fields for recreation and community events.",
+    "address": "Jalan Stadium, 95000 Sri Aman, Sarawak",
+    "businessHours": "6:00 AM – 10:00 PM (Daily)",
+    "contact": "+60 83-321 200"
+  },
+  {
+    "name": "Chinese Temple (unnamed)",
+    "features": "Riverside temple known for its cultural heritage, festivals, and beautiful architecture.",
+    "address": "Along Batang Lupar River, 95000 Sri Aman, Sarawak",
+    "businessHours": "8:00 AM – 6:00 PM (Daily)",
+    "contact": "+60 83-321 200"
+  },
+  {
+    "name": "Iban Longhouse Tours",
+    "features": "Experience traditional Iban culture with guided visits to longhouses including food, crafts, and hospitality.",
+    "address": "Accessible via Batang Ai National Park",
+    "businessHours": "Tours typically arranged during daylight hours",
+    "contact": "+60 82-610 088"
+  }
+]
