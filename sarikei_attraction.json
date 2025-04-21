@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Pineapple Statue",
+    "features": "A prominent landmark symbolizing Sarikei's status as the 'Fruit Basket of Sarawak'. Popular photo spot.",
+    "address": "Waterfront area, Sarikei Town",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Sarikei Central Market",
+    "features": "Bustling market offering local produce, souvenirs, and snacks. Cultural and culinary hotspot.",
+    "address": "Bandar Sarikei, 96100 Sarikei, Sarawak",
+    "businessHours": "7:00 AM – 1:00 AM (Monday to Sunday)",
+    "contact": "-"
+  },
+  {
+    "name": "Sarikei Lake Garden (Taman Tasik Sarikei)",
+    "features": "Serene park with gardens, ponds, and recreational areas. Ideal for family outings and jogging.",
+    "address": "Jalan Repok, approx. 1 km from Sarikei Town",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Nyelong Esplanade",
+    "features": "Scenic riverside promenade along Sungai Nyelong. Great for sunsets and boat watching.",
+    "address": "Fronting the Sungei Nyelong, Sarikei",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Sebangkoi Country Park",
+    "features": "Natural park with greenery, waterfalls, flora, and fauna. Excellent for nature walks and birdwatching.",
+    "address": "30 km from Sarikei Town",
+    "businessHours": "8:00 AM – 6:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Rumah Nyuka Longhouse",
+    "features": "Traditional Iban longhouse experience with activities like fruit harvesting and rubber tapping.",
+    "address": "17 km from Bayong junction on Betong-Sarikei highway",
+    "businessHours": "By appointment or tour schedule",
+    "contact": "-"
+  },
+  {
+    "name": "Rajang River & Sarikei Jetty",
+    "features": "Riverfront spot for boat rides, fishing, and observing local river life on Malaysia's longest river.",
+    "address": "Central Sarikei",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Pineapple Festival (Pesta Nanas)",
+    "features": "Annual celebration of Sarikei's pineapple industry featuring competitions, food stalls, and performances.",
+    "address": "Sarikei Town (various venues)",
+    "businessHours": "Annually in November",
+    "contact": "-"
+  },
+  {
+    "name": "Masjid Al-Muttaqin Sarikei",
+    "features": "Prominent mosque known for its architecture and community role.",
+    "address": "Near Sarikei town center",
+    "businessHours": "Open for prayer times",
+    "contact": "-"
+  },
+  {
+    "name": "Sarikei Civic Centre",
+    "features": "Venue for exhibitions, local events, and cultural activities.",
+    "address": "Near King George VI Square, Sarikei",
+    "businessHours": "Varies by event",
+    "contact": "-"
+  }
+]
