@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Limbang Regional Museum (Old Fort)",
+    "features": "Housed in a reconstructed 1897 fort, this museum showcases archaeological finds and ethnic artifacts, offering insights into the region's history and culture.",
+    "address": "Approximately 200 meters upriver from the Limbang River",
+    "businessHours": "09:00 AM – 04:45 PM (Monday to Friday); 10: 00 AM - 04: 00 PM (Saturday, Sunday, and public holidays)",
+    "contact": "085-211277"
+  },
+  {
+    "name": "Limpaki Wetland",
+    "features": "An estuarine mangrove forest teeming with wildlife such as proboscis monkeys, crocodiles, and fireflies. Activities include canoeing, wildlife watching, and visits to nearby longhouses.",
+    "address": "Near Kampung Limpaki, about 15 km from Limbang town",
+    "businessHours": "24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Bukit Mas (Gold Hill) & Tasik Bukit Mas",
+    "features": "Playgrounds, picnic areas, and a Buddhist shrine halfway up the hill",
+    "address": "98700 Limbang, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "085-210807"
+  },
+  {
+    "name": "Kampung Meritam Mud Volcanoes",
+    "features": "Unique volcanic mud pools believed to have therapeutic properties. Visitors can enjoy mud baths in crater-like formations.",
+    "address": "Approximately 35 km from Limbang town",
+    "Admission": "RM4",
+    "businessHours": "Daily, 9:00 AM – 6:00 PM",
+    "contact": "082-423600"
+  }
+]
