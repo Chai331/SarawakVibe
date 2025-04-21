@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Tua Pek Kong Temple",
+    "description": "Iconic Chinese temple with 7-story pagoda by Rajang River.",
+    "address": "Jalan Temple, 96000 Sibu",
+    "businessHours": "8:00 AM – 9:00 PM",
+    "contact": "084-310 888"
+  },
+  {
+    "name": "Sibu Heritage Centre",
+    "description": "Museum preserving Sibu's cultural and historical identity.",
+    "address": "Jalan Central, 96000 Sibu",
+    "businessHours": "10:00 AM – 4:30 PM (Tue–Sun)",
+    "contact": "084-340 980"
+  },
+  {
+    "name": "Lau King Howe Hospital Museum",
+    "description": "Malaysia’s only medical museum with antique hospital tools.",
+    "address": "Jalan Lau King Howe, 96000 Sibu",
+    "businessHours": "9:00 AM – 5:00 PM (Tue–Sun)",
+    "contact": "084-310 888"
+  },
+  {
+    "name": "Sibu Central Market",
+    "description": "The largest covered market in Malaysia. Authentic street life.",
+    "address": "Jalan Channel, 96000 Sibu",
+    "businessHours": "6:00 AM – 6:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Sibu Night Market",
+    "description": "Lively evening market for local snacks and clothing.",
+    "address": "Jalan Market, 96000 Sibu",
+    "businessHours": "5:00 PM – 10:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Bukit Lima Forest Park",
+    "description": "Peat swamp forest trail with wildlife sightings and boardwalk.",
+    "address": "Jalan Bukit Lima, 96000 Sibu",
+    "businessHours": "6:00 AM – 6:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Taman Bukit Aup",
+    "description": "Hilltop park with panoramic city views and jogging trails.",
+    "address": "Bukit Aup, 96000 Sibu",
+    "businessHours": "Daily",
+    "contact": "-"
+  },
+  {
+    "name": "Rajang Esplanade",
+    "description": "Riverwalk with views of Rajang River and Sibu skyline.",
+    "address": "Rajang Waterfront, 96000 Sibu",
+    "businessHours": "24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Sibu Gateway",
+    "description": "Park with swan statues and zodiac displays. Great for photos.",
+    "address": "Jalan Kampung Nyabor, 96000 Sibu",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Swan Statue",
+    "description": "Iconic white swan sculpture symbolizing Sibu’s nickname.",
+    "address": "Sibu Town Square, 96000 Sibu",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Sibu River Cruise",
+    "description": "Scenic sunset river cruise along the mighty Rajang River.",
+    "address": "Rajang River Jetty, 96000 Sibu",
+    "businessHours": "5:30 PM – 7:00 PM (Daily)",
+    "contact": "-"
+  }
+]
