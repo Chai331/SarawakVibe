@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Yitery Café & Restaurant",
+    "features": "Offers a variety of Asian-Western fusion dishes in a modern setting.",
+    "address": "Pekan Sri Aman, 95000 Simanggang, Sarawak, Malaysia",
+    "businessHours": "10:00 AM – 10:00 PM",
+    "contact": "011-6539 9377"
+  },
+  {
+    "name": "Kenny Kitchen",
+    "features": "Known for fried Kolo Mee with pork liver, chicken breast, and eggs.",
+    "address": "Near Simanggang Post Office, Sri Aman, Sarawak, Malaysia",
+    "businessHours": "7:00 AM – 2:00 PM, 5:00 PM – 10:00 PM",
+    "contact": "016-833 9783"
+  },
+  {
+    "name": "Sri Aman Seafood Restaurant",
+    "features": "Specializes in fresh seafood dishes in a casual dining environment.",
+    "address": "Pekan Sri Aman, 95000 Simanggang, Sarawak, Malaysia",
+    "businessHours": "3:00 PM – 11:30 PM",
+    "contact": "011-2544 0195"
+  },
+  {
+    "name": "Tasty Chicken Rice",
+    "features": "Offers a variety of chicken rice dishes in a comfortable setting.",
+    "address": "Pekan Sri Aman, 95000 Simanggang, Sarawak, Malaysia",
+    "businessHours": "9:00 AM – 9:30 PM",
+    "contact": "083-326 658"
+  },
+  {
+    "name": "Golden City Restaurant (Main Road)",
+    "features": "Well-known eatery offering local dishes. Pork knuckles are highly praised.",
+    "address": "Jalan Akses Sri Aman, 95000 Sri Aman, Sarawak, Malaysia",
+    "businessHours": "8:00 AM – 6:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Tandang Sari",
+    "features": "Known for nasi lemak, strong coffee, and crispy roti canai.",
+    "address": "Jalan Hospital, Pekan Sri Aman, 95000 Simanggang, Sarawak, Malaysia",
+    "businessHours": "8:00 AM – 8:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Fah Lok Café",
+    "features": "Serves Chinese dim sum, porridge, and other breakfast favorites.",
+    "address": "No.8, Jalan Main Bazar, Pekan Sri Aman, 95000 Simanggang, Sarawak, Malaysia",
+    "businessHours": "7:00 AM – 1:00 PM",
+    "contact": "013-811 3438"
+  },
+  {
+    "name": "Farihin Café",
+    "features": "Serves toast with kaya and butter and various local snacks.",
+    "address": "Lot 10/G, Rumah Kedai MARA, 1, Jalan Hospital, 95000 Simanggang, Sarawak, Malaysia",
+    "businessHours": "10:00 AM – 10:00 PM (Mon–Sat)",
+    "contact": "013-226 7170"
+  },
+  {
+    "name": "Golden Café",
+    "features": "Offers Mamak-style dishes including teh tarik and roti canai.",
+    "address": "1704-1708, Jln Durian, Pekan Sri Aman, 95000 Simanggang, Sarawak",
+    "businessHours": "6:00 AM – 12:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Pak Long Café",
+    "features": "Famous for bubur lambuk and toasted bread in a local village ambiance.",
+    "address": "No. 9, Kampung Tengah, 95000 Simanggang, Sarawak, Malaysia",
+    "businessHours": "6:30 AM – 5:30 PM",
+    "contact": "013-757 4761"
+  }
+]
