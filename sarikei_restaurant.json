@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Glory Cafe",
+    "features": "Known for generous portions and flavorful local dishes.",
+    "address": "1st Floor, Lorong 3, Jalan Bersatu, Bandar Sarikei, 96100 Sarikei, Sarawak",
+    "businessHours": "7:00 AM – 3:30 PM",
+    "contact": "084-642531 / 016-7065531"
+  },
+  {
+    "name": "De.chef Dining (Sarikei Branch)",
+    "features": "Offers a modern dining experience with a variety of dishes.",
+    "address": "52, Ground Floor, Jalan Repok, Sarikei 96100, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM",
+    "contact": "+60 16-839 0234"
+  },
+  {
+    "name": "Kejap Food Sarikei",
+    "features": "Fast food outlet offering a variety of quick meals.",
+    "address": "No.6B Ground Floor, Jalan Bersatu, Bandar Sarikei, 96100 Sarikei, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM",
+    "contact": "010-794 3301"
+  },
+  {
+    "name": "Yitery by Yi Garden",
+    "features": "Offers a variety of dishes in a cozy setting.",
+    "address": "No.12A, Lorong 1, Jalan Nenas, Bandar Sarikei, 96100 Sarikei, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM",
+    "contact": "011-6539 9377"
+  },
+  {
+    "name": "Peking Restaurant",
+    "features": "Specializes in seafood and Chinese cuisine.",
+    "address": "Bandar Jakar, Jakar, 96100 Sarikei, Sarawak",
+    "businessHours": "10:00 AM – 09:00 PM",
+    "contact": "011-1201 8023"
+  },
+  {
+    "name": "New Hua Hua Restaurant",
+    "features": "Offers a variety of local dishes in a casual setting.",
+    "address": "Ground Floor, No. 7, Jalan Tok Tok, Sarikei, Sarawak",
+    "businessHours": "08:00 AM – 09:00 PM",
+    "contact": "+60 84-651 906"
+  },
+  {
+    "name": "New Fortune Restaurant",
+    "features": "Serves Chinese cuisine with a variety of dishes.",
+    "address": "Jalan Tok Tok, Bandar Sarikei, 96100 Sarikei, Sarawak",
+    "businessHours": "08:30 AM – 09:00 PM",
+    "contact": "019-838 1717"
+  },
+  {
+    "name": "1 Malaysia Cafe Restaurant",
+    "features": "Offers a variety of local Malaysian dishes.",
+    "address": "2013, Jalan Masjid Lama, Bandar Sarikei, 96100 Sarikei, Sarawak",
+    "businessHours": "07:30 AM – 09:30 PM",
+    "contact": "084-656 255"
+  },
+  {
+    "name": "Spice Garden",
+    "features": "Offers a variety of local dishes in a comfortable setting.",
+    "address": "Lorong 2, Bandar Sarikei, 96100 Sarikei, Sarawak",
+    "businessHours": "07:00 AM – 09:00 PM",
+    "contact": "019-958 9988"
+  },
+  {
+    "name": "Dayang Bread Story Bakery & Cafe",
+    "features": "Offers a variety of Western dishes and is known for its bakery items.",
+    "address": "Jalan Abdul Rahman, 96100 Sarikei, Sarawak",
+    "businessHours": "07:00 AM – 07:00 PM",
+    "contact": "+60 13-732 6438"
+  }
+]
