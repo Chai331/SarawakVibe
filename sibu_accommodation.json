@@ -1,0 +1,72 @@
+[
+  {
+    "name": "The Orchid Hotel",
+    "features": "Central location, restaurant, room service, and luggage storage. Clean and cozy.",
+    "address": "No.9 Brooke Drive, Sibu, 96000 Sarawak",
+    "businessHours": "24 hours",
+    "contact": "084-331 999"
+  },
+  {
+    "name": "Paramount Hotel",
+    "features": "Spacious rooms and restaurant. Suitable for business and family stays.",
+    "address": "Jalan Kampung Datu, 96000 Sibu",
+    "businessHours": "24 hours",
+    "contact": "084-331 122"
+  },
+  {
+    "name": "Otel Hotel",
+    "features": "Modern rooms near Farley Mall. Good for short trips with free parking.",
+    "address": "Sublot 12, Hann's Commercial Centre, Sibu, 96000 Sarawak",
+    "businessHours": "24 hours",
+    "contact": "084-251 133"
+  },
+  {
+    "name": "Kingwood Hotel",
+    "features": "Spacious riverside hotel with concierge, restaurant, parking and city views.",
+    "address": "No.12, Lorong Lanang 4, 96000 Sibu, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "084-335 888"
+  },
+  {
+    "name": "Starlink Hotel",
+    "features": "Affordable, clean and convenient. Free Wi-Fi, daily housekeeping, elevator access.",
+    "address": "2C, 13, Lorong Tunku Abdul Rahman 8A, Sibu, 96000 Sarawak",
+    "businessHours": "24 hours",
+    "contact": "084-221 666"
+  },
+  {
+    "name": "Win Hotel",
+    "features": "Basic, budget-friendly, ideal for backpackers and local travelers.",
+    "address": "No. 88, Jalan Wong Nai Siong, 96000 Sibu",
+    "businessHours": "24 hours",
+    "contact": "084-323 111"
+  },
+  {
+    "name": "Hann's Residence",
+    "features": "Modern serviced apartments with kitchenettes, ideal for longer stays.",
+    "address": "Hanns Commercial Centre, Jalan Wong King Huo, 96000 Sibu",
+    "businessHours": "24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Comfort Inn",
+    "features": "Basic rooms with great value. Clean and located in city center.",
+    "address": "No. 5, Jalan Temple, 96000 Sibu",
+    "businessHours": "24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Premier Hotel",
+    "features": "Well-known business hotel near Sibu Town Square. Has restaurant & hair salon.",
+    "address": "Jalan Kampung Datu, 96000 Sibu",
+    "businessHours": "24 hours",
+    "contact": "084-323 222"
+  },
+  {
+    "name": "Tanahmas The Sibu Hotel",
+    "features": "Upscale hotel with outdoor pool, Peppers Cafe, ballroom & event hall.",
+    "address": "Lot 277, Jalan Kampung Nyabor, 96000 Sibu",
+    "businessHours": "24 hours",
+    "contact": "084-333 188"
+  }
+]
