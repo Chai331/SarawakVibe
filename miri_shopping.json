@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Bintang Megamall",
+    "features": "Five-level shopping complex with over 250 tenants including Uniqlo, H&M, Parkson, Toys R Us, and Daiso. Also features GSC Cinema and family entertainment.",
+    "address": "Jalan Miri-Pujut, 98000 Miri, Sarawak, Malaysia",
+    "businessHours": "10:00 AM – 10:00 PM (Daily)",
+    "contact": "+60 85-438 877 / +60 85-430 887 / +60 12-877 8077"
+  },
+  {
+    "name": "Boulevard Shopping Mall",
+    "features": "Family-friendly mall with fashion stores, electronics, books, eateries, and a supermarket. Located along Miri-Pujut Road.",
+    "address": "Lot 2528, Boulevard Commercial Centre, Jalan Boulevard Utama, 98000 Miri, Sarawak, Malaysia",
+    "businessHours": "10:00 AM – 10:00 PM (Daily)",
+    "contact": "+60 85-432 999"
+  },
+  {
+    "name": "The Imperial Mall",
+    "features": "Centrally located mall connected to the Imperial Hotel. Features a mix of retail outlets, ideal for travelers.",
+    "address": "2nd Floor, Imperial Mall, Jalan Merpati, 98000 Miri, Sarawak, Malaysia",
+    "businessHours": "Not specified",
+    "contact": "+60 85-243 1133"
+  },
+  {
+    "name": "Permaisuri Imperial City Mall",
+    "features": "Modern mall with a wide range of retail and dining options. Popular shopping destination in Miri.",
+    "address": "98000 Miri, Sarawak, Malaysia",
+    "businessHours": "Not specified",
+    "contact": "Refer to Facebook page"
+  },
+  {
+    "name": "MYY Mall",
+    "features": "Community mall that hosts events and local business booths. A platform for entrepreneurs.",
+    "address": "98000 Miri, Sarawak, Malaysia",
+    "businessHours": "Not specified",
+    "contact": "+60 13-497 9241 / +60 16-343 7254"
+  }
+]
