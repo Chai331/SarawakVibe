@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Rasa Sayang Kitchen",
+    "features": "Serves local dishes such as rendang, nasi lemak, and banana leaf rice.",
+    "address": "NO A-G-17, BLOCK A, TIMES SQUARE, 98000 Miri, Sarawak",
+    "businessHours": "10:00 AM – 08:30 PM",
+    "contact": "016-867 6691"
+  },
+  {
+    "name": "Lam's Noodle House",
+    "features": "Offers Kolo Mee and steamed chicken meat in a casual setting.",
+    "address": "Lot 630, Ground Floor, Jalan Pelita Utama, Pelita Commercial Centre, 98000 Miri, Sarawak",
+    "businessHours": "06:00 AM – 05:00 PM",
+    "contact": "+60 85-413 688"
+  },
+  {
+    "name": "Madli Satay Corner",
+    "features": "Famous for satay, nasi goreng, and mee goreng. A local favorite.",
+    "address": "Ground Floor, Lot 1088, Jalan Merpati, 98000 Miri, Sarawak",
+    "businessHours": "08:30 AM – 11:00 PM",
+    "contact": "085-426 615"
+  },
+  {
+    "name": "Haus Haust Cafe & Bar",
+    "features": "Fusion of Japanese, Australian, Malaysian, and Italian cuisines in a cozy setting.",
+    "address": "525, Jalan Pelita 3, Pelita Commercial Centre, 98000 Miri, Sarawak",
+    "businessHours": "10:30 AM – 09:00 PM",
+    "contact": "011-1616 7399"
+  },
+  {
+    "name": "Laksa Lolita",
+    "features": "Specializes in Sarawak Laksa and Mee Jawa. Affordable and tasty.",
+    "address": "349, Jalan Miri – Lutong, Lutong, 98000 Miri, Sarawak, Malaysia",
+    "businessHours": "07:00 AM – 01:00 PM",
+    "contact": "019-685 9348"
+  },
+  {
+    "name": "Route 66 Cafe",
+    "features": "Friendly atmosphere known for delicious cakes and pastries.",
+    "address": "Lot 1401 Of Parent Lot 991, Jalan Agama, Lutong, 98000 Miri, Sarawak",
+    "businessHours": "08:00 AM – 06:00 PM",
+    "contact": "085-654 759"
+  },
+  {
+    "name": "Inver Cafe",
+    "features": "Warm and inviting atmosphere with a variety of food options.",
+    "address": "Ground Floor, Lot 1180, Waterfront Commercial Centre, 98000 Miri, Sarawak",
+    "businessHours": "09:00 AM – 09:00 PM (Closed on Sundays)",
+    "contact": "019-378 1180"
+  },
+  {
+    "name": "Inthemood Cafe",
+    "features": "Cozy cafe with a wide selection of food and drinks in a relaxing setting.",
+    "address": "Ground Floor, Lot 633, Jalan North Yu Seng, Utara, 98000 Miri, Sarawak",
+    "businessHours": "10:30 AM – 10:00 PM (Daily)",
+    "contact": "010-982 6537"
+  },
+  {
+    "name": "Lao Yang Dim Sum",
+    "features": "Dim sum specialties served fresh in the morning and lunch hours.",
+    "address": "Miri, Sarawak",
+    "businessHours": "07:00 AM – 01:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Don’s Burger Permyjaya",
+    "features": "Local burger joint known for variety and late-night eats.",
+    "address": "Lot 1989 Jalan Pujut 9B, Jln Pujut 9, 98000 Miri, Sarawak",
+    "businessHours": "12:00 PM – 11:00 PM",
+    "contact": "014-960 0254"
+  }
+]
