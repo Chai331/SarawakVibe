@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Rossello",
+    "features": "Renowned for its soft and delicious pizza dough; considered one of the best Western dining spots in Serian.",
+    "address": "Sublot 65, Lot 1397 Serian Piazza, 94700 Serian, Sarawak",
+    "businessHours": "11:00 AM – 10:00 PM",
+    "contact": "011-1857 4002"
+  },
+  {
+    "name": "Ah Guan Pau",
+    "features": "Famous for homemade steamed buns with soft texture and delicious fillings.",
+    "address": "Bazaar, No.98, Serian, Bandar Serian, 94700 Serian, Sarawak",
+    "businessHours": "06:00 AM – 06:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Curry House Serian",
+    "features": "Halal Indian Muslim restaurant known for rich and spicy mutton curry; also offers naan and other Indian dishes.",
+    "address": "Bandar Serian, 94700 Serian, Sarawak",
+    "businessHours": "06:00 AM – 10:30 PM",
+    "contact": "011-2548 1572"
+  },
+  {
+    "name": "T-View Restaurant",
+    "features": "Offers grilled dishes with a stunning natural view; suitable for relaxed dinners.",
+    "address": "1-17A Jalan Serian By Pass, 94700 Serian, Sarawak",
+    "businessHours": "04:00 PM – 12:00 PM",
+    "contact": "014-287 6008"
+  },
+  {
+    "name": "DC Bistro",
+    "features": "Serves burgers, rice dishes, and meats; known for its gourmet offerings in the Serian area.",
+    "address": "Sublot 52, Serian Piazza, 94700 Serian, Sarawak",
+    "businessHours": "10:30 AM – 10:00 PM",
+    "contact": "+60 12-872 3890"
+  },
+  {
+    "name": "Restoran Kita",
+    "features": "Offers a variety of authentic Malaysian dishes, including nasi campur with a selection of fresh daily dishes.",
+    "address": "Bandar Serian, 94700 Serian, Sarawak",
+    "businessHours": "-",
+    "contact": "-"
+  },
+  {
+    "name": "Restoran 1289 (Masakan Tiociu)",
+    "features": "Specializes in Tiociu (Teochew) cuisine, offering rich and flavorful Chinese dishes.",
+    "address": "Tebedu, 94760 Serian, Sarawak",
+    "businessHours": "-",
+    "contact": "-"
+  },
+  {
+    "name": "M.U.G - Mi Udang Gumpey by Haji Bukri",
+    "features": "Offers a variety of dishes including Western, homely, and 'Kampung' style meals; signature dish is 'Mee Udang Gumpey'.",
+    "address": "Kampung Gumpey, 94700 Simunjan, Sarawak",
+    "businessHours": "09:00 AM – 05:00 PM",
+    "contact": "019-885 7987"
+  },
+  {
+    "name": "Deli Cafe (Serian)",
+    "features": "Offers a variety of Malaysian dishes with an average price of RM20 per person; suitable for breakfast and lunch.",
+    "address": "LT 339-345, No.3, Tingkat Bawah, Jalan Pekan Baru, Golden Ace Commercial Centre, Bandar Serian, 94700 Serian, Sarawak",
+    "businessHours": "7:00 AM – 3:00 PM",
+    "contact": "+60 13-847 5933"
+  },
+  {
+    "name": "SCR Serian",
+    "features": "SCR is a well-known Malaysian restaurant chain offering a variety of local dishes. It's a popular spot for casual dining, known for its consistent quality and family-friendly atmosphere.",
+    "address": "No. 10 & 11, Ground Floor, Sublot 1261 & 1262, Serian Golden Square, Serian, Sarawak",
+    "businessHours": "10:30 AM – 6:30 PM",
+    "contact": "+60 17-861 8133"
+  }
+]
