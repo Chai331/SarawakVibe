@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Hoan Gallery",
+    "features": "An art museum showcasing local artworks and cultural exhibits.",
+    "address": "HSL Tower, Lorong La Promenade 2, Kuching - Samarahan Expressway, 94300 Kota Samarahan, Sarawak",
+    "businessHours": "09:30 AM – 06:30 PM",
+    "contact": "017-8545651"
+  },
+  {
+    "name": "Samarahan Country Club",
+    "features": "A golf course offering recreational facilities and a serene environment.",
+    "address": "Lot 4954, Block 26, MTLD, Kuching - Samarahan Hwy, 94300 Kota Samarahan, Sarawak",
+    "businessHours": "07:00 AM – 06:30 PM",
+    "contact": "082-366266"
+  }
+]
