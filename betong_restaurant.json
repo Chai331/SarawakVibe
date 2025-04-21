@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Betong Café Restaurant",
+    "features": "Offers a variety of local and international dishes in a cozy setting.",
+    "address": "No.35, Betong Bazaar, 95700 Betong, Sarawak",
+    "businessHours": "09:00 AM – 06:00 PM",
+    "contact": "019-748 3185"
+  },
+  {
+    "name": "Fazzah’s Kitchen",
+    "features": "Known for affordable local cuisine; a popular spot for lunch and dinner.",
+    "address": "fazzah's kitchen, bandar baru, 95700 Betong, Sarawak",
+    "businessHours": "08:00 AM – 09:45 PM",
+    "contact": "014-957 4933"
+  },
+  {
+    "name": "Kedai Makan Sedap Betong",
+    "features": "Offers a range of traditional Malaysian meals in a casual setting.",
+    "address": "Pekan Betong, 95700 Betong, Sarawak",
+    "businessHours": "06:30 AM – 09:30 PM",
+    "contact": "083-472 701"
+  },
+  {
+    "name": "Wan Haussin Café",
+    "features": "Serves a variety of local dishes; known for its friendly service.",
+    "address": "95700 Betong, Sarawak",
+    "businessHours": "07:00 AM – 02:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Dapur TTE Betong",
+    "features": "Offers a selection of Malaysian dishes in a casual dining environment.",
+    "address": "Jln Sie Meng Chaw, Pekan Betong, 95700 Betong, Sarawak",
+    "businessHours": "09:00 AM – 08:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Garden Food Court",
+    "features": "A variety of food stalls offering local and international cuisine.",
+    "address": "95700 Betong, Sarawak",
+    "businessHours": "07:00 AM – 09:15 PM",
+    "contact": "017-803 6298"
+  },
+  {
+    "name": "JR Café",
+    "features": "Serves delicious and affordable Malay food in a clean, air-conditioned environment.",
+    "address": "SHOPLOT 7, BLOCK 9 BATU API LAND DISTRICT Jalan Bebanggai, 95700 Betong, Sarawak",
+    "businessHours": "07:00 AM – 05:00 PM",
+    "contact": "012-859 3236"
+  },
+  {
+    "name": "Indah Café and Catering",
+    "features": "Offers a range of local dishes suitable for breakfast and lunch; provides take-out options and outdoor seating.",
+    "address": "95700 Betong, Sarawak",
+    "businessHours": "06:00 AM – 05:00 PM",
+    "contact": "019-469 9696"
+  },
+  {
+    "name": "BE Café Betong",
+    "features": "Offers a unique dining experience with a variety of local and international dishes in a cozy atmosphere.",
+    "address": "No.35, Betong Bazaar, 95700 Betong, Sarawak",
+    "businessHours": "09:00 AM – 06:00 PM",
+    "contact": "019-748 3185"
+  },
+  {
+    "name": "Griffin’s Café & Smokehouse",
+    "features": "Known for its grilled dishes and burgers; offers a unique dining experience with a smokehouse ambiance.",
+    "address": "95700 Betong, Sarawak",
+    "businessHours": "08:00 AM – 11:00 PM",
+    "contact": "-"
+  }
+]
