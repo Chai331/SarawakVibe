@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Star Mega Mall",
+    "description": "Large mall with Daesco, Watsons, MR.DIY and branded clothing stores.",
+    "address": "Jalan Tuanku Abdul Rahman, 96000 Sibu",
+    "businessHours": "10:00 AM – 10:00 PM",
+    "contact": "+60 84-218035"
+  },
+  {
+    "name": "Wisma Sanyan",
+    "description": "Landmark tower offering retail, banking and dining experiences.",
+    "address": "No.1, Jalan Sanyan, 96000 Sibu",
+    "businessHours": "Varies by outlet",
+    "contact": "084-349 772"
+  },
+  {
+    "name": "Swan Square",
+    "description": "Shopping, Upside Down Museum, and event space. Family-friendly.",
+    "address": "No. 2 Jalan Ling Kai Cheng 12-A, 96000 Sibu",
+    "businessHours": "Daily until 10:00 PM",
+    "contact": "+60 84-220 724"
+  },
+  {
+    "name": "Medan Mall",
+    "description": "Popular local mall with electronics, fashion and F&B outlets.",
+    "address": "No. 6, Jalan Wong King Huo, 96000 Sibu",
+    "businessHours": "9:30 AM – 9:30 PM",
+    "contact": "084-348 388"
+  },
+  {
+    "name": "Sing Kwong Shopping Mall",
+    "description": "Budget supermarket, fashion, electronics and household items.",
+    "address": "Jalan Salim, 96000 Sibu",
+    "businessHours": "9:00 AM – 10:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Farley Mall",
+    "description": "Supermarket chain with groceries and daily essentials.",
+    "address": "Jalan Salim, 96000 Sibu",
+    "businessHours": "8:00 AM – 10:00 PM",
+    "contact": "084-212 666"
+  },
+  {
+    "name": "Delta Mall",
+    "description": "Trendy shopping with boutiques, cafes, and mobile shops.",
+    "address": "Jalan Pedada, 96000 Sibu",
+    "businessHours": "10:00 AM – 9:00 PM",
+    "contact": "-"
+  }
+]
