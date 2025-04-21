@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Unaco Supermarket Sri Aman",
+    "features": "Established in 1989, Unaco is a prominent supermarket chain offering fresh produce, groceries, and household items.",
+    "address": "Jalan Kejatau, 95000 Sri Aman, Sarawak",
+    "businessHours": "8:00 AM – 9:00 PM (Daily)",
+    "contact": "+60 82-366 080"
+  },
+  {
+    "name": "Super Save Sri Aman",
+    "features": "Part of the Super Save Group, it offers affordable household goods, stationery, and daily necessities.",
+    "address": "Lot 1519, Block 2, Simanggang Town District, 95000 Sri Aman, Sarawak",
+    "businessHours": "9:00 AM – 9:00 PM (Daily)",
+    "contact": "+60 82-571 368"
+  },
+  {
+    "name": "Lian Yi Marketing Sdn. Bhd.",
+    "features": "A supermarket that also sells IKEA products, catering to various household needs.",
+    "address": "Lot 1122 & 1123, Block 4, Bandar Sri Aman, Sarawak",
+    "businessHours": "8:00 AM – 8:30 PM (Daily)",
+    "contact": "+60 83-321 521"
+  }
+]
