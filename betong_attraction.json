@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Bukit Sadok",
+    "features": "A historical hilltop site where Iban warrior Rentap defended against British colonial forces. Offers panoramic views of the Saribas plains and South China Sea.",
+    "address": "Approximately 3 hours' hike from Betong town",
+    "businessHours": "Accessible during daylight hours",
+    "contact": "+60 83-471 814 (Betong Resident Office)"
+  },
+  {
+    "name": "Fort Lily",
+    "features": "Built in 1858 by James Brooke, this belian timber fort served as a defense post and is now being converted into a museum showcasing Iban cultural artifacts.",
+    "address": "Jalan Datuk Patinggi Udin, Betong, Sarawak, Malaysia",
+    "businessHours": "Check local listings",
+    "contact": "-"
+  },
+  {
+    "name": "Matop Longhouse, Sungai Paku",
+    "features": "A traditional 28-door Iban longhouse where visitors can experience ancestral culture including skull viewing and tuak tasting.",
+    "address": "30 km from Betong along the Paku River",
+    "businessHours": "By appointment",
+    "contact": "+60 83-471 577 (Betong Resident Office)"
+  },
+  {
+    "name": "Maludam National Park",
+    "features": "Peat swamp forest covering 432 sq km, home to Proboscis Monkeys and hornbills. Rich biodiversity for nature lovers.",
+    "address": "3 km from Kampung Maludam",
+    "businessHours": "8:00 AM – 5:00 PM",
+    "contact": "+60 13-562 3078 (Kampung Maludam Homestay)"
+  },
+  {
+    "name": "Pantai Tanjung Kembang",
+    "features": "A peaceful beach for relaxation and scenic coastal views.",
+    "address": "Kabong area, Betong Division, Sarawak",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Masjid Jamek Saratok",
+    "features": "Main mosque in Saratok, known for community activities and worship.",
+    "address": "Saratok, Betong Division, Sarawak, Malaysia",
+    "businessHours": "Open during prayer hours",
+    "contact": "-"
+  }
+]
