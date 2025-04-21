@@ -1,0 +1,72 @@
+[
+  {
+    "name": "SHARING Café @ Bintulu",
+    "features": "Diverse menu with Western and Asian fusion dishes. Cozy and modern setting.",
+    "address": "Ground Floor, Lot 4605 & 4606, Pier 99, Jalan Abang Galau, Commercial Centre, 97000 Bintulu, Sarawak",
+    "businessHours": "11:00 AM – 11:00 PM (Daily, Last order at 10:30 PM)",
+    "contact": "+60 16-578 0618"
+  },
+  {
+    "name": "Rain Tree Café & Restaurant",
+    "features": "Seasonal specials like Ayam Masak Merah and Daging Masak Hitam. Comfortable ambiance.",
+    "address": "Pedestrian Bridge, Medan Jaya Commercial Centre, Bintulu",
+    "businessHours": "10:30 AM – 10:00 PM (Daily)",
+    "contact": "010-989 0918"
+  },
+  {
+    "name": "Brew73° Gastropub",
+    "features": "Chef specials and wide beer selection. Friendly staff and welcoming vibes.",
+    "address": "97000 Bintulu, Sarawak",
+    "businessHours": "11:00 AM – 11:00 PM (Daily)",
+    "contact": "086-335 820"
+  },
+  {
+    "name": "Bai-le Café",
+    "features": "Casual spot offering Malaysian dishes. Popular breakfast destination.",
+    "address": "Sublot 13, Lot 2646, Ground Floor, Parkcity Commercial Centre Square, 97000 Bintulu, Sarawak",
+    "businessHours": "7:15 AM – 11:45 AM (Daily)",
+    "contact": "+60 12-886 0507"
+  },
+  {
+    "name": "Laksa Bintulu – City Café",
+    "features": "Well-known for its Laksa Bintulu and other local delights.",
+    "address": "34, Taman Kemena Raya, Bintulu, Sarawak",
+    "businessHours": "7:00 AM – 3:00 AM (Daily)",
+    "contact": "+60 86-361 078"
+  },
+  {
+    "name": "Restoran Sajian Ma",
+    "features": "Shrimp Noodles specialty and a variety of Malaysian favorites.",
+    "address": "Lot 193, Jalan Tun Ahmad Zaidi, Parkcity Commerce Square, Bintulu, Sarawak",
+    "businessHours": "11:00 AM – 10:00 PM (Daily)",
+    "contact": "013-562 8082"
+  },
+  {
+    "name": "Teratak Chi Bo",
+    "features": "Halal dishes with local Malaysian flavors. Great for quick meals.",
+    "address": "Ground Floor, Sublot 112 No 3398, Parkcity Commercial Centre, Jalan Tun Ahmad Zaidi, 97000 Bintulu, Sarawak",
+    "businessHours": "7:00 AM – 3:00 PM (Daily)",
+    "contact": "013-836 3502"
+  },
+  {
+    "name": "Peace Garden Seafood Restaurant Sdn. Bhd",
+    "features": "Seafood dishes in a relaxed, family-friendly setting.",
+    "address": "No. 108-111, Ground Floor, Parkcity Commercial Square, Jalan Tun Ahmad Zaidi, 97000 Bintulu, Sarawak",
+    "businessHours": "10:00 AM – 2:00 PM, 5:00 PM – 11:00 PM (Daily)",
+    "contact": "086-313 029"
+  },
+  {
+    "name": "Kojo Café",
+    "features": "Ice cream, nasi lemak, waffles, and sandwiches in a stylish interior.",
+    "address": "No.46, Lot 8498, Town Square, Jalan Tun Ahmad Zaidi, 97000 Bintulu, Sarawak",
+    "businessHours": "10:09 AM – 10:00 PM (Daily)",
+    "contact": "010-394 1340"
+  },
+  {
+    "name": "Anjung Selera",
+    "features": "Traditional Malay and Western food. Great for family and group dining.",
+    "address": "No. 2524, Phase II, Kampung Assyakirin, 97000 Bintulu, Sarawak",
+    "businessHours": "5:00 PM – 10:30 PM (Daily)",
+    "contact": "+60 13-844 9734"
+  }
+]
