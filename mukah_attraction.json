@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Mukah Beach",
+    "description": "A serene coastal spot ideal for leisurely walks, picnics, and enjoying the sea breeze.",
+    "address": "96400 Mukah, Sarawak, Malaysia",
+    "businessHours": "Open 24 hours daily",
+    "contact": "-"
+  },
+  {
+    "name": "Lamin Dana Cultural Boutique Lodge",
+    "description": "A traditional Melanau longhouse offering cultural experiences, guided tours, and accommodations.",
+    "address": "Kampung Tellian, 96400 Mukah, Sarawak, Malaysia",
+    "businessHours": "Check-in and tour times vary; please refer to their official website",
+    "contact": "https://www.lamindana.com"
+  },
+  {
+    "name": "Sapan Puloh Melanau Museum",
+    "description": "A private museum showcasing Melanau artifacts and antiques.",
+    "address": "Kampung Tellian, 96400 Mukah, Sarawak, Malaysia",
+    "businessHours": "Typically open daily; exact hours may vary",
+    "contact": "-"
+  },
+  {
+    "name": "Sago Factory Chimney",
+    "description": "A 20-meter tall brick chimney, a relic of Mukah's sago production era in the 19th century.",
+    "address": "Near the Chinese temple, Mukah, Sarawak, Malaysia",
+    "businessHours": "Accessible at all times",
+    "contact": "-"
+  },
+  {
+    "name": "Tapak Pesta Kaul Mukah",
+    "description": "The official venue for the annual Kaul Festival, featuring cultural performances and traditional games.",
+    "address": "96400 Mukah, Sarawak, Malaysia",
+    "businessHours": "Open year-round, 24/7",
+    "contact": "-"
+  },
+  {
+    "name": "Masjid Setia Raja",
+    "description": "A prominent mosque known for its distinctive architecture and serene atmosphere.",
+    "address": "Bandar Baru Mukah, 96400 Mukah, Sarawak, Malaysia",
+    "businessHours": "Open daily; specific prayer times may apply",
+    "contact": "-"
+  }
+]
