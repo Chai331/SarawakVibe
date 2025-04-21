@@ -1,0 +1,44 @@
+[
+  {
+    "name": "OYO 90860 Wawasan Inn",
+    "features": "2-star hotel with air-conditioned rooms, massage services, garden, private bathrooms, free WiFi, and 24-hour front desk.",
+    "address": "No. 69-72, Jalan Masjid Lama, 96100 Sarikei, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "03-5037 8296"
+  },
+  {
+    "name": "OYO 90809 Oriental Hotel",
+    "features": "2-star hotel with free WiFi, 24-hour front desk, room service, and family-friendly accommodations.",
+    "address": "No. 48 Repok Road, 96100 Sarikei, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "084-651 209"
+  },
+  {
+    "name": "TLT Guest House",
+    "features": "Offers air-conditioned rooms, private bathrooms, flat-screen TVs, free WiFi, and 24-hour reception.",
+    "address": "No. 16C, Jalan Barrack, 96100 Sarikei, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "084-656 886"
+  },
+  {
+    "name": "Myway Homestay Sarikei",
+    "features": "4-bedroom vacation home with free WiFi, kitchen, washing machine, flat-screen TV, and free parking.",
+    "address": "Myway Homestay, 96100 Sarikei, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "012-871 2222"
+  },
+  {
+    "name": "Repok Homestay",
+    "features": "Vacation home with 4 bedrooms, 3 bathrooms, full kitchen, free WiFi, private parking. Non-smoking.",
+    "address": "No. 8, Lorong 1, Jalan Ara, 96100 Sarikei, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Hotel Ming Kiong",
+    "features": "2-star hotel with air-conditioned family rooms, private bathrooms, and desks.",
+    "address": "Lot 131, Binatang Town District, Jalan Kelupu, 96500 Rumah Chaong, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "017-261 9577"
+  }
+]
