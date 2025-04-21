@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Gunung Mulu National Park (Mulu Caves)",
+    "features": "UNESCO World Heritage Site with limestone karst formations and the world's largest cave chamber.",
+    "address": "Gunung Mulu National Park, Miri, Sarawak",
+    "businessHours": "Varies, usually 8:00 AM – 5:00 PM",
+    "contact": "+60 85-792 300"
+  },
+  {
+    "name": "Niah National Park (Niah Caves)",
+    "features": "Prehistoric cave paintings and archaeological finds dating back 40,000 years.",
+    "address": "Niah National Park, Miri, Sarawak",
+    "businessHours": "8:00 AM – 5:00 PM (Daily)",
+    "contact": "+60 85-737 454"
+  },
+  {
+    "name": "Lambir Hills National Park",
+    "features": "Rich biodiversity, scenic waterfalls, and nature hiking trails.",
+    "address": "Lambir Hills, Miri, Sarawak",
+    "businessHours": "8:00 AM – 5:00 PM (Daily)",
+    "contact": "+60 85-471 630"
+  },
+  {
+    "name": "Canada Hill and the Grand Old Lady",
+    "features": "Malaysia’s first oil well and scenic lookout point over Miri.",
+    "address": "Canada Hill, Miri, Sarawak",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Coco Cabana",
+    "features": "Seaside venue with lighthouse, art installations, and waterfront events.",
+    "address": "Marina Bay, Miri, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM (Daily)",
+    "contact": "+60 85-491 526"
+  },
+  {
+    "name": "Miri City Fan",
+    "features": "Urban park with gardens, a swimming pool, and cultural hall.",
+    "address": "Jalan Kipas, Miri, Sarawak",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Tusan Beach",
+    "features": "Natural beach famous for glowing 'Blue Tears' and cliff formations.",
+    "address": "Tusan Beach, Miri, Sarawak",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Taman Awam Miri",
+    "features": "Public park with a suspension bridge, gardens, and playgrounds.",
+    "address": "Jalan Miri-Bintulu, Miri, Sarawak",
+    "businessHours": "8:00 AM – 6:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Tua Pek Kong Temple",
+    "features": "Oldest temple in Miri with intricate Chinese architectural design.",
+    "address": "Jalan Bendahara, Miri, Sarawak",
+    "businessHours": "7:00 AM – 7:00 PM (Daily)",
+    "contact": "+60 85-433 555"
+  },
+  {
+    "name": "Miri Handicraft Centre",
+    "features": "Traditional Sarawakian crafts, beadwork, and souvenir shopping.",
+    "address": "Jalan Brooke, Miri, Sarawak",
+    "businessHours": "9:00 AM – 6:00 PM (Daily)",
+    "contact": "+60 85-417 754"
+  },
+  {
+    "name": "Tamu Muhibbah",
+    "features": "Bustling traditional market selling produce and local goods.",
+    "address": "Jalan Padang, Miri, Sarawak",
+    "businessHours": "6:00 AM – 12:00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Tanjong Lobang Beach",
+    "features": "Popular beach spot for scenic views and sunsets.",
+    "address": "Tanjong Lobang, Miri, Sarawak",
+    "businessHours": "Open 24 hours",
+    "contact": "-"
+  },
+  {
+    "name": "Miri Times Square",
+    "features": "Modern seaside destination for shopping and dining.",
+    "address": "Marina Phase 1, Miri, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM (varies by shop)",
+    "contact": "-"
+  },
+  {
+    "name": "Miri Crocodile Farm",
+    "features": "Home to hundreds of crocodiles and exotic animals with exhibits.",
+    "address": "Kampung Kuala Baram, Miri, Sarawak",
+    "businessHours": "9:00 AM – 5:00 PM (Daily)",
+    "contact": "+60 85-612 999"
+  },
+  {
+    "name": "San Ching Tian Temple",
+    "features": "One of Southeast Asia’s largest Taoist temples with colorful statues.",
+    "address": "Jalan Krokop 9, Miri, Sarawak",
+    "businessHours": "8:00 AM – 6:00 PM (Daily)",
+    "contact": "-"
+  }
+]
