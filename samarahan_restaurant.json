@@ -1,0 +1,72 @@
+[
+  {
+    "name": "The Food by Kuali Emak",
+    "features": "Popular for steamboat and seafood dishes; a favorite spot for dinner among locals.",
+    "address": "Jln I-MAS Village, 94300 Kota Samarahan, Sarawak",
+    "businessHours": "05:00 AM – 10:00 PM (Daily)",
+    "contact": "016-827 3587"
+  },
+  {
+    "name": "Oten's @ Rasa Indah Kafeteria",
+    "features": "Offers generous portions at affordable prices; ample parking space available.",
+    "address": "Jalan Datuk Mohammad Musa, Kota Samarahan, Sarawak",
+    "businessHours": "7:00 AM – 6:00 PM (Daily)",
+    "contact": "082-661 624"
+  },
+  {
+    "name": "Secret Recipe Café & Restaurant",
+    "features": "Renowned for its cakes and a variety of Asian and Western dishes; located within The Summer Mall.",
+    "address": "G35 & G90, Lot 1396–1403 & Lot 108, The Summer Shopping Mall, Jalan Dato Mohd Musa, Kota Samarahan, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM (Daily)",
+    "contact": "016-889 5992"
+  },
+  {
+    "name": "Rumah Asap Dayak",
+    "features": "Showcases traditional Dayak cuisine, including BBQ and pansuh dishes; features multiple stalls with various specialties",
+    "address": "Kota Samarahan (Link), 94300 Kuching, Sarawak",
+    "businessHours": "10:00 AM-12:00 PM",
+    "contact": "013-693 5506"
+  },
+  {
+    "name": "G Coffee @ Desa Ilmu",
+    "features": "Known for its large-sized drinks, especially the popular green tea flavor; a cozy spot for beverages.",
+    "address": "86, Lor Desa Ilmu 22A, 94300 Kota Samarahan, Sarawak",
+    "businessHours": "10:00 AM-06:00 PM",
+    "contact": "016-885 8748"
+  },
+  {
+    "name": "Verano Food Court @ Summer Mall",
+    "features": "Specializes in flavorful tomyam soup; a go-to place for spicy food enthusiasts.",
+    "address": "Desa Ilmu, Kota Samarahan, Sarawak",
+    "businessHours": "02:00 PM-11:30 PM",
+    "contact": "017-500 5981"
+  },
+  {
+    "name": "Restoran Dulang Kampung",
+    "features": "Offers traditional Malay dishes in a rustic setting; known for its authentic kampung-style meals.",
+    "address": "Ground Floor, SL 52 & 53 PH15, Jln Desa Ilmu, 94300 Kota Samarahan, Sarawak",
+    "businessHours": "10:00 AM-11:00 PM",
+    "contact": "082-663 339"
+  },
+  {
+    "name": "D’Dayak Cafe Deligh",
+    "features": "Serves a variety of Dayak and local Malaysian dishes; appreciated for its cultural ambiance.",
+    "address": "Ground Floor, LOT 3688, Medan Universiti, Kota Samarahan (Link), 94300 Kota Samarahan, Sarawak",
+    "businessHours": "06:30 AM-12:00 AM",
+    "contact": "010-978 9189"
+  },
+  {
+    "name": "Pohonmas Café & Restaurant",
+    "features": "Offers a variety of local Malaysian dishes in a cozy café setting",
+    "address": "Ground Floor L3022 SL16, Jalan Datuk Mohammad Musa, Kota Samarahan, Sarawak",
+    "businessHours": "07:00 AM-11:00 AM",
+    "contact": "014-686 9663"
+  },
+  {
+    "name": "Pinang Bistro Restaurant",
+    "features": "Serves a range of Malaysian dishes, including nasi lemak and grilled fish, in a casual dining environment.",
+    "address": "Ground Floor, Uni Square 10 & 11, Kuching-Kota Samarahan Expressway, Kota Samarahan, Sarawak",
+    "businessHours": "06:30 AM – 03:30 PM (Daily)",
+    "contact": "010-961 7405"
+  }
+]
