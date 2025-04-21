@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Riverside Seafood",
+    "features": "Offers a variety of seafood dishes in a pleasant riverside setting.",
+    "address": "96400 Mukah, Sarawak",
+    "businessHours": "11:00 AM – 2:00 PM, 4:00 PM – 11:00 PM",
+    "contact": "016-870 9950"
+  },
+  {
+    "name": "Ming Huong Restaurant",
+    "features": "Known for its local Chinese cuisine and affordable pricing.",
+    "address": "35, Jalan Lintang, 96400 Mukah, Sarawak",
+    "businessHours": "07:00 AM – 01:00 PM, 05:00 PM – 08:00 PM",
+    "contact": "019-868 8739"
+  },
+  {
+    "name": "Nibong House",
+    "features": "Offers a variety of seafood dishes in a comfortable setting.",
+    "address": "Jalan Orang Kaya Setiaraja, Taman Boulevard Setiaraja, 96400 Mukah, Sarawak",
+    "businessHours": "10:00 AM – 12:00 AM",
+    "contact": "014-681 8601"
+  },
+  {
+    "name": "Wang Hua Cafe",
+    "features": "Serves a variety of local dishes in a casual setting.",
+    "address": "SL54, L1204, New Township, 96400 Mukah, Sarawak",
+    "businessHours": "7:30 AM – 3:00 PM",
+    "contact": "+60 14-693 2188"
+  },
+  {
+    "name": "La Fame Cafe",
+    "features": "Offers a variety of meat dishes in a cozy atmosphere.",
+    "address": "1st Floor No. 38, Jalan Lintang, 96400 Mukah, Sarawak",
+    "businessHours": "9:00 AM – 9:00 PM",
+    "contact": "+60 19-499 8830"
+  },
+  {
+    "name": "Tunu Station Smoke House",
+    "features": "Offers a variety of Malaysian dishes in a comfortable setting.",
+    "address": "Sublot 5, 2nd Floor, Medah Setia Raja, 96400 Mukah, Sarawak",
+    "businessHours": "11:30 AM – 11:00 PM",
+    "contact": "+60 19-696 9997"
+  },
+  {
+    "name": "Memey’s Kitchen Hut",
+    "features": "Known for its seafood dishes and tranquil dining atmosphere.",
+    "address": "Jalan Bunga Raya, 96400 Mukah, Sarawak",
+    "businessHours": "03:00 PM – 11:00 PM",
+    "contact": "013-575 1195"
+  },
+  {
+    "name": "Super Jojo (Mukah)",
+    "features": "Fast food restaurant offering a variety of Asian dishes.",
+    "address": "Warung 36, Medan Ria, Taman Boulevard Setiaraja, 96400 Mukah, Sarawak",
+    "businessHours": "08:00 AM – 10:00 PM",
+    "contact": "-"
+  },
+  {
+    "name": "Mukah Raja Nasi Ayam Tempayan",
+    "features": "Specializes in Nasi Ayam Tempayan, a local favorite.",
+    "address": "No. 397 & No. 398 Ground Floor, Greenfield Jaya Shoplot, Jalan Orang Kaya Setiaraja, 96400 Mukah, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM",
+    "contact": "016-979 4889"
+  },
+  {
+    "name": "Gadong View Restaurant",
+    "features": "Offers a variety of Asian and Malaysian dishes.",
+    "address": "Jalan Pam Stesen, Kampung Telian, 96400 Mukah, Sarawak",
+    "businessHours": "06:30 AM – 01:30 PM",
+    "contact": "016-864 3378"
+  }
+]
