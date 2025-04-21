@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Tong Lok Restaurant",
+    "features": "Offers Chinese cuisine with a variety of dishes.",
+    "address": "Pekan Limbang, 98700 Limbang, Sarawak",
+    "businessHours": "08:00 AM – 08:00 PM",
+    "contact": "019-824 1344"
+  },
+  {
+    "name": "Mr. Bim Cafe",
+    "features": "Specializes in Chinese cuisine with a variety of dishes.",
+    "address": "Lot 1367, Jalan Buangsiol, 98700 Limbang, Sarawak",
+    "businessHours": "07:45 AM – 01:30 PM",
+    "contact": "013-830 9219"
+  },
+  {
+    "name": "88 Cafe",
+    "features": "Offers a variety of breakfast options; note that it is a non-halal establishment.",
+    "address": "Lot 2007, Ground Floor, Jalan Tarap, Limbang, Sarawak",
+    "businessHours": "06:00 AM – 02:30 PM",
+    "contact": "014-577 4448"
+  },
+  {
+    "name": "Nasi Lemak Pandan Cafe",
+    "features": "Specializes in nasi lemak and other local Malaysian dishes.",
+    "address": "AH150, Pekan Limbang, 98700 Limbang, Sarawak",
+    "businessHours": "08:00 AM – 08:00 PM",
+    "contact": "011-3591 5456"
+  },
+  {
+    "name": "Pitstop Restaurant Seafood (Pit Stop Cafe)",
+    "features": "Known for its seafood and curry dishes",
+    "address": "No. 55A, Jalan Buangsiol, Pekan Limbang, 98700 Limbang, Sarawak",
+    "businessHours": "11:00 AM – 2:00 PM, 4:00 PM – 12:00 AM",
+    "contact": "019-856 7381"
+  },
+  {
+    "name": "Sarimah Curry House",
+    "features": "Offers a variety of local Malaysian dishes, including nasi campur and kolo mee.",
+    "address": "2056, Ricketts Commercial Centre, Jalan Tarap, Pekan Limbang, 98700 Limbang, Sarawak",
+    "businessHours": "07:00 AM – 05:00 PM",
+    "contact": "085-214 677"
+  },
+  {
+    "name": "Borneo Coffee Shop",
+    "features": "Known for its breakfast offerings, including kaya toast and half-boiled eggs.",
+    "address": "Pekan Limbang, 98700 Limbang, Sarawak",
+    "businessHours": "-",
+    "contact": "085-217 688"
+  },
+  {
+    "name": "Qami Cafe (Limbang Airport)",
+    "features": "Conveniently located at Limbang Airport, offering meals for travelers.",
+    "address": "Terminal, 98700 Limbang, Sarawak",
+    "businessHours": "06:30 AM – 06:30 PM",
+    "contact": "085-217 688"
+  },
+  {
+    "name": "SCR (Singapore Chicken Rice) Limbang",
+    "features": "SCR is a halal-certified fast-food chain specializing in chicken rice dishes. The Limbang outlet offers a variety of Malaysian-style chicken rice meals in a casual dining environment.",
+    "address": "Pekan Limbang, 98700 Limbang, Sarawak, Malaysia",
+    "businessHours": "09:00 AM – 07:00 PM",
+    "contact": "-"
+  }
+]
