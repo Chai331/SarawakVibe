@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Medan Hotel @ Medan Mall",
+    "features": "A 5-storey hotel with 80 stylishly appointed guestrooms and suites, the only luxury hotel in Betong New Township with conference and meeting facilities.",
+    "address": "Bandar Baru Betong, 95700 Betong, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "+60 83-471 919"
+  },
+  {
+    "name": "Asia Inn Betong",
+    "features": "Offers affordable accommodations with essential amenities, including Wi-Fi.",
+    "address": "16, Betong Crystal Commercial Centre SL, 16/1775 Jalan Temenggong Montegrai, 95700 Betong, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 83-472 177"
+  },
+  {
+    "name": "Betong Plaza Hotel",
+    "features": "Provides comfortable accommodations with courteous staff, catering to various customer needs.",
+    "address": "35, Jalan Saribas, Pekan Betong, 95700 Betong, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 83-472 898"
+  },
+  {
+    "name": "The Regent Inn",
+    "features": "Offers budget accommodations in the heart of Betong, with easy access to local shops and eateries.",
+    "address": "17, Lorong Padeh, 95700 Betong, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 83-472 539"
+  },
+  {
+    "name": "Loxing Hotel",
+    "features": "Provides budget accommodations in central Betong, near shopping and eateries.",
+    "address": "Jalan Rentap, 95700 Betong, Sarawak, Malaysia",
+    "businessHours": "24 hours",
+    "contact": "+60 83-472 278"
+  },
+  {
+    "name": "Garden View Betong Hotel",
+    "features": "3-star hotel with restaurant, air-conditioned rooms, free WiFi, private bathrooms, and 24-hour service.",
+    "address": "2 Soi 2 Aiyerberchang Road, T. Betong, A. Betong, Yala 95110, Thailand",
+    "businessHours": "24 hours",
+    "contact": "+66 86-488 7190"
+  }
+]
