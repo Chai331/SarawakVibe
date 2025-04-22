@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Fort Sylvia",
+    "features": "Built in 1880 and named after Rani Sylvia Brooke, this historical fort now serves as a museum managed by the Tun Jugah Foundation. It showcases Iban artifacts, textiles, and the legacy of the Brooke dynasty.",
+    "address": "Kapit town center",
+    "businessHours": "10: 00 AM - 12: 00 PM, 02: 00 PM - 05: 00 PM (Tuesday - Sunday), Monday closed",
+    "contact": "082-239672"
+  },
+  {
+    "name": "Kapit Waterfront",
+    "features": "A lively riverside area lined with ferries, barges, longboats, and floating docks. It's a central hub for transportation and local commerce.",
+    "address": "Along the Rajang River in Kapit",
+    "businessHours": "-",
+    "contact": "013-5778719"
+  },
+  {
+    "name": "Pasar Teresang (Teresang Market)",
+    "features": "The central market of Kapit, offering a variety of local produce, jungle goods, and handicrafts. It's a bustling hub for daily shopping and cultural experiences.",
+    "address": "Central Kapit, near the passenger express terminal",
+    "businessHours": "06: 00 AM - 06: 00 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Kapit Hock Leong Tieng Tua Pek Kong Temple",
+    "features": "A significant Chinese temple in Kapit, reflecting the town's multicultural heritage.",
+    "address": "Jalan Kubu, Kapit, Sarawak",
+    "businessHours": "07: 00 AM - 09: 00 PM (Daily)",
+    "contact": "013-5668086"
+  },
+  {
+    "name": "Masjid Jabal An-Nur Kapit",
+    "features": "A prominent mosque serving the local Muslim community.",
+    "address": "Jln Bleteh, Kapit, Sarawak",
+    "businessHours": "-",
+    "contact": "-"
+  },
+  {
+    "name": "Kapit Lily Pond",
+    "features": "A serene spot in Kapit, ideal for relaxation and enjoying nature.",
+    "address": "Jln Penghulu Nyanggau, 96800 Kapit, Sarawak",
+    "businessHours": "24 hours",
+    "contact": "-"
+  }
+]
