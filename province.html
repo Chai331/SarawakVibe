@@ -93,9 +93,24 @@
     const province = urlParams.get('name');
     const provinceContent = document.getElementById('provinceContent');
 
+    const displayMap = {
+      'sriaman': 'Sri Aman',
+      'sarikei': 'Sarikei',
+      'mukah': 'Mukah',
+      'limbang': 'Limbang',
+      'betong': 'Betong',
+      'kapit': 'Kapit',
+      'samarahan': 'Samarahan',
+      'serian': 'Serian',
+      'bintulu': 'Bintulu',
+      'miri': 'Miri',
+      'sibu': 'Sibu',
+      'kuching': 'Kuching'
+    };
+
     if (province) {
       document.getElementById('provinceTitle').textContent =
-        province.charAt(0).toUpperCase() + province.slice(1);
+        displayMap[province] || province.charAt(0).toUpperCase() + province.slice(1);
     }
 
     function goBack() {
@@ -104,7 +119,7 @@
 
     async function showContent(type) {
       const prefixMap = {
-        'sri aman': 'sri',
+        'sriaman': 'sri',
         'sarikei': 'sar',
         'mukah': 'muk',
         'limbang': 'lim',
@@ -129,28 +144,31 @@
       const imagePrefix = typeMap[type] || type.slice(0, 3);
       const jsonFile = `${province.toLowerCase()}_${type}.json`;
 
-      let html = `<h2>${province.toUpperCase()} - ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>`;
+      let html = `<h2>${displayMap[province] || province.toUpperCase()} - ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>`;
 
       try {
         const response = await fetch(jsonFile);
         if (!response.ok) throw new Error("File not found");
         const places = await response.json();
 
-        places.forEach((place, index) => {
-          const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
+        if (Array.isArray(places) && places.length === 0) {
+          html += `<p>No ${type} content available for this province.</p>`;
+        } else {
+          places.forEach((place, index) => {
+            const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
 
-          html += `
-            <div class="place">
-              <img src="${imageUrl}" alt="${place.name}" />
-              <h3>${place.name}</h3>
-              <p><strong>${place.features ? 'Features' : 'Description'}:</strong> ${place.features || place.description}</p>
-              <p><strong>Address:</strong> ${place.address}</p>
-              <p><strong>Business Hours:</strong> ${place.businessHours}</p>
-              <p><strong>Contact:</strong> ${place.contact}</p>
-            </div>
-          `;
-        });
-
+            html += `
+              <div class="place">
+                <img src="${imageUrl}" alt="${place.name}" />
+                <h3>${place.name}</h3>
+                <p><strong>${place.features ? 'Features' : 'Description'}:</strong> ${place.features || place.description}</p>
+                <p><strong>Address:</strong> ${place.address}</p>
+                <p><strong>Business Hours:</strong> ${place.businessHours}</p>
+                <p><strong>Contact:</strong> ${place.contact}</p>
+              </div>
+            `;
+          });
+        }
       } catch (err) {
         html += `<p style="color:red;">⚠ Unable to load ${type} info. Please check if the JSON file exists or the name is correct.</p>`;
         console.error("Fetch error:", err);
@@ -161,4 +179,3 @@
   </script>
 </body>
 </html>
-
