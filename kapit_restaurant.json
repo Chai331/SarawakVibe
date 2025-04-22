@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Happy Garden (樂園)",
+    "features": "Known for authentic Chinese dishes including dim sum and fried noodles.",
+    "address": "Sublot 2163, Jalan Bleteh, 96007 Kapit, Sarawak",
+    "businessHours": "10:00 AM – 10:00 PM (Daily)",
+    "contact": "+60 11-1056 4080"
+  },
+  {
+    "name": "Xin Yue Restaurant",
+    "features": "Specializes in Lok Lok (skewered and dipped food), a popular local delicacy.",
+    "address": "Lot 944/945, Chelsea Height, Jalan Selirik, Kapit, Sarawak",
+    "businessHours": "10:30 AM – 9:30 PM (Daily)",
+    "contact": "+60 84-798 210"
+  },
+  {
+    "name": "Nice Cafe",
+    "features": "Offers a variety of local dishes in a casual setting.",
+    "address": "Jalan Ulu Sg. Kapit, Kapit, Sarawak",
+    "businessHours": "9:30 AM – 9:30 PM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Smoke House Cafe & Restaurant",
+    "features": "A cafe offering a variety of beverages and light meals in a relaxed atmosphere.",
+    "address": "SMOKE HOUSE CAFE & RESTAURANT, Sublot 3, Jln Bleteh, 96800 Kapit, Sarawak",
+    "businessHours": "8:00 AM – 8:00 PM (Daily)",
+    "contact": "014-858 2888"
+  },
+  {
+    "name": "Triple F Cafe & Bistro",
+    "features": "A popular spot for evening dining, offering a variety of dishes in a cozy bistro setting.",
+    "address": "Jalan Selirik, Kapit, Sarawak",
+    "businessHours": "03:00 PM – 12:00 AM (Daily)",
+    "contact": "-"
+  },
+  {
+    "name": "Restoran Rakyat Kapit",
+    "features": "A local restaurant offering a variety of Malaysian dishes.",
+    "address": "61, No. 35B, Harmony Mall, Jalan Court, 96800 Kapit, Sarawak",
+    "businessHours": "06:00 AM – 05:30 PM (Daily)",
+    "contact": "011-1605 5901"
+  },
+  {
+    "name": "GOOD TASTE RESTAURANT & Coffee Shop",
+    "features": "Offers a variety of local and Chinese dishes in a casual setting.",
+    "address": "Jalan Airport, Kapit, Sarawak",
+    "businessHours": "11:30 AM – 9:00 PM (Daily)",
+    "contact": "+60 16-281 8981"
+  },
+  {
+    "name": "Gelanggang Kenyalang",
+    "features": "A local eatery offering a variety of Malaysian dishes.",
+    "address": "Kapit, Sarawak",
+    "businessHours": "05:00 AM – 12:00 PM (Daily)",
+    "contact": "-"
+  }
+]
