@@ -91,6 +91,7 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const province = urlParams.get('name');
+    const normalizedProvince = province?.toLowerCase().replace(/\s+/g, '');
     const provinceContent = document.getElementById('provinceContent');
 
     const displayMap = {
@@ -108,9 +109,24 @@
       'kuching': 'Kuching'
     };
 
+    const prefixMap = {
+      'sriaman': 'sri',
+      'sarikei': 'sar',
+      'mukah': 'muk',
+      'limbang': 'lim',
+      'betong': 'bet',
+      'kapit': 'kap',
+      'samarahan': 'smrh',
+      'serian': 'ser',
+      'bintulu': 'btl',
+      'miri': 'miri',
+      'sibu': 'sibu',
+      'kuching': 'kch'
+    };
+
     if (province) {
       document.getElementById('provinceTitle').textContent =
-        displayMap[province] || province.charAt(0).toUpperCase() + province.slice(1);
+        displayMap[normalizedProvince] || province.charAt(0).toUpperCase() + province.slice(1);
     }
 
     function goBack() {
@@ -118,21 +134,6 @@
     }
 
     async function showContent(type) {
-      const prefixMap = {
-        'sriaman': 'sri',
-        'sarikei': 'sar',
-        'mukah': 'muk',
-        'limbang': 'lim',
-        'betong': 'bet',
-        'kapit': 'kap',
-        'samarahan': 'smrh',
-        'serian': 'ser',
-        'bintulu': 'btl',
-        'miri': 'miri',
-        'sibu': 'sibu',
-        'kuching': 'kch'
-      };
-
       const typeMap = {
         restaurant: 'res',
         shopping: 'shop',
@@ -140,11 +141,11 @@
         attraction: 'att'
       };
 
-      const prefix = prefixMap[province.toLowerCase()] || 'kch';
+      const prefix = prefixMap[normalizedProvince] || 'kch';
       const imagePrefix = typeMap[type] || type.slice(0, 3);
-      const jsonFile = `${province.toLowerCase()}_${type}.json`;
+      const jsonFile = `${normalizedProvince}_${type}.json`;
 
-      let html = `<h2>${displayMap[province] || province.toUpperCase()} - ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>`;
+      let html = `<h2>${displayMap[normalizedProvince] || province.toUpperCase()} - ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>`;
 
       try {
         const response = await fetch(jsonFile);
