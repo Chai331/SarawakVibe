@@ -19,7 +19,7 @@
     }
     .gallery {
       display: flex;
-      justify-content: center; /* 图片居中 */
+      justify-content: flex-start; /* 🔥 图片靠左 */
       margin-bottom: 20px;
     }
     .gallery img {
@@ -36,16 +36,6 @@
       font-size: 18px;
       line-height: 1.6;
       margin: 10px 0;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      font-size: 18px;
-      color: blue;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
     strong {
       font-size: 20px;
@@ -100,7 +90,6 @@
         const prefix = prefixMap[province] || 'kch';
         const imagePrefix = typeMap[type] || type.slice(0, 3);
 
-        // 只放一张图片
         let imagesHTML = `
           <img src="https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg" alt="${place.name}">
         `;
@@ -112,7 +101,6 @@
           <p><strong>Location:</strong> ${place.address}</p>
           <p><strong>Business Hours:</strong> ${place.businessHours}</p>
           <p><strong>Contact:</strong> ${place.contact}</p>
-          <a href="province.html?name=${province}">← Back to ${province.charAt(0).toUpperCase() + province.slice(1)}</a>
         `;
       } catch (err) {
         console.error("Error loading detail:", err);
