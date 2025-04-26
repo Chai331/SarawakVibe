@@ -70,21 +70,6 @@
       font-size: 18px;
     }
 
-    .rate-button {
-      margin-top: 8px;
-      padding: 6px 10px;
-      background-color: #ffcc00;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    .rate-button:hover {
-      background-color: #e6b800;
-    }
-
     a {
       text-decoration: none;
       color: blue;
@@ -183,7 +168,6 @@
               <img src="${imageUrl}" alt="${place.name}" />
               <div>
                 <h3><a href="detail.html?province=${normalizedProvince}&type=${type}&id=${index}">${place.name}</a></h3>
-                <button class="rate-button" onclick="goRate('${place.name}')">Rate and Comment</button>
               </div>
             </div>
           `;
@@ -194,11 +178,6 @@
       }
 
       provinceContent.innerHTML = html;
-    }
-
-    function goRate(placeName) {
-      // 把 placeName 带到 rate.html，记得 encodeURIComponent 防止出错
-      window.location.href = `rate.html?place=${encodeURIComponent(placeName)}`;
     }
   </script>
 </body>
