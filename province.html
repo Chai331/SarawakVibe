@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Province Details</title>
   <style>
+    /* 样式保持不变 */
     body {
       margin: 0;
       padding: 20px;
@@ -12,7 +13,6 @@
       background-color: #f2f2f2;
       overflow-x: hidden;
     }
-
     .top-bar {
       display: flex;
       align-items: center;
@@ -20,7 +20,6 @@
       margin-bottom: 20px;
       flex-wrap: wrap;
     }
-
     .back-button {
       padding: 10px 15px;
       background-color: #ffcc00;
@@ -29,7 +28,6 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .nav-links button {
       margin-right: 10px;
       padding: 8px 12px;
@@ -38,22 +36,18 @@
       border-radius: 5px;
       cursor: pointer;
     }
-
     .nav-links button:hover {
       background-color: #ddd;
     }
-
     .content {
       background-color: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
     .place {
       margin-bottom: 30px;
     }
-
     .place img {
       width: 100%;
       max-width: 400px;
@@ -62,16 +56,22 @@
       display: block;
       margin-bottom: 10px;
     }
-
     .place h3 {
       margin: 0 0 5px;
     }
-
     .place p {
       margin: 3px 0;
     }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
   <div class="top-bar">
     <button class="back-button" onclick="goBack()">⬅ Return</button>
@@ -109,21 +109,6 @@
       'kuching': 'Kuching'
     };
 
-    const prefixMap = {
-      'sriaman': 'sri',
-      'sarikei': 'sar',
-      'mukah': 'muk',
-      'limbang': 'lim',
-      'betong': 'bet',
-      'kapit': 'kap',
-      'samarahan': 'smrh',
-      'serian': 'ser',
-      'bintulu': 'btl',
-      'miri': 'miri',
-      'sibu': 'sibu',
-      'kuching': 'kch'
-    };
-
     if (province) {
       document.getElementById('provinceTitle').textContent =
         displayMap[normalizedProvince] || province.charAt(0).toUpperCase() + province.slice(1);
@@ -140,6 +125,20 @@
         accommodation: 'hotel',
         attraction: 'att'
       };
+      const prefixMap = {
+        'sriaman': 'sri',
+        'sarikei': 'sar',
+        'mukah': 'muk',
+        'limbang': 'lim',
+        'betong': 'bet',
+        'kapit': 'kap',
+        'samarahan': 'smrh',
+        'serian': 'ser',
+        'bintulu': 'btl',
+        'miri': 'miri',
+        'sibu': 'sibu',
+        'kuching': 'kch'
+      };
 
       const prefix = prefixMap[normalizedProvince] || 'kch';
       const imagePrefix = typeMap[type] || type.slice(0, 3);
@@ -152,24 +151,16 @@
         if (!response.ok) throw new Error("File not found");
         const places = await response.json();
 
-        if (Array.isArray(places) && places.length === 0) {
-          html += `<p>No ${type} content available for this province.</p>`;
-        } else {
-          places.forEach((place, index) => {
-            const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
+        places.forEach((place, index) => {
+          const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${index + 1}.jpg`;
 
-            html += `
-              <div class="place">
-                <img src="${imageUrl}" alt="${place.name}" />
-                <h3>${place.name}</h3>
-                <p><strong>${place.features ? 'Features' : 'Description'}:</strong> ${place.features || place.description}</p>
-                <p><strong>Address:</strong> ${place.address}</p>
-                <p><strong>Business Hours:</strong> ${place.businessHours}</p>
-                <p><strong>Contact:</strong> ${place.contact}</p>
-              </div>
-            `;
-          });
-        }
+          html += `
+            <div class="place">
+              <img src="${imageUrl}" alt="${place.name}" />
+              <h3><a href="detail.html?province=${normalizedProvince}&type=${type}&id=${index}">${place.name}</a></h3>
+            </div>
+          `;
+        });
       } catch (err) {
         html += `<p style="color:red;">⚠ Unable to load ${type} info. Please check if the JSON file exists or the name is correct.</p>`;
         console.error("Fetch error:", err);
