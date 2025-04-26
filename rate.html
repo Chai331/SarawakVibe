@@ -1,164 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rate SarawakVibe</title>
+  <meta charset="UTF-8">
+  <title>Rate and Comment</title>
   <style>
     body {
-      margin: 0;
-      padding: 20px;
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      overflow-x: hidden;
+      padding: 20px;
+      background: #f5f5f5;
     }
-
     .container {
-      background-color: white;
-      padding: 30px;
+      background: #fff;
+      padding: 20px;
       border-radius: 10px;
       max-width: 600px;
-      margin: 30px auto;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
     h2 {
       text-align: center;
-      margin-bottom: 20px;
     }
-
-    .rating {
+    .stars {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
-
-    .rating span {
+    .star {
+      font-size: 30px;
       cursor: pointer;
-      transition: color 0.3s;
+      color: lightgray;
     }
-
-    .rating span:hover,
-    .rating span.active {
+    .star.selected {
       color: gold;
     }
-
     textarea {
       width: 100%;
-      height: 120px;
+      height: 100px;
+      margin-top: 10px;
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 8px;
       border: 1px solid #ccc;
-      resize: vertical;
       font-size: 1rem;
-      margin-bottom: 20px;
     }
-
-    button {
+    button.submit-btn {
+      margin-top: 10px;
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       background-color: #ffcc00;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1.1rem;
       font-weight: bold;
-      font-size: 1rem;
       cursor: pointer;
     }
-
-    button:hover {
-      background-color: #e6b800;
-    }
-
-    .back-button {
-      display: block;
-      margin: 20px auto 0;
-      text-align: center;
-      font-size: 0.9rem;
-      text-decoration: underline;
-      color: #333;
-      cursor: pointer;
-    }
-
-    .message {
-      text-align: center;
+    .comments {
       margin-top: 20px;
-      font-weight: bold;
-      color: green;
+    }
+    .comment-item {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <h2>Rate Your Experience</h2>
+    <h2 id="placeTitle">Rating</h2>
 
-    <div class="rating" id="starRating">
-      <span data-value="1">&#9734;</span>
-      <span data-value="2">&#9734;</span>
-      <span data-value="3">&#9734;</span>
-      <span data-value="4">&#9734;</span>
-      <span data-value="5">&#9734;</span>
+    <div class="stars" id="starContainer">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
     </div>
 
-    <textarea id="feedback" placeholder="Tell us what you think..."></textarea>
+    <textarea id="comment" placeholder="Write your comment here..."></textarea>
+    <button class="submit-btn" onclick="submitRating()">Submit</button>
 
-    <button onclick="submitRating()">Submit Rating</button>
-
-    <div class="message" id="message"></div>
-
-    <div class="back-button" onclick="goBack()">⬅ Back to Home</div>
+    <div class="comments" id="commentsSection">
+      <h3>Comments:</h3>
+      <div id="commentList"></div>
+    </div>
   </div>
 
   <script>
-    const stars = document.querySelectorAll('#starRating span');
+    const urlParams = new URLSearchParams(window.location.search);
+    const placeName = urlParams.get('place') || "Place";
+    document.getElementById('placeTitle').innerText = `Rate and Comment for: ${placeName}`;
+
+    const stars = document.querySelectorAll('.star');
     let selectedRating = 0;
 
     stars.forEach(star => {
       star.addEventListener('click', () => {
-        selectedRating = parseInt(star.getAttribute('data-value'));
-        updateStars();
+        selectedRating = star.dataset.value;
+        stars.forEach(s => s.classList.remove('selected'));
+        for (let i = 0; i < selectedRating; i++) {
+          stars[i].classList.add('selected');
+        }
       });
     });
 
-    function updateStars() {
-      stars.forEach(star => {
-        if (parseInt(star.getAttribute('data-value')) <= selectedRating) {
-          star.classList.add('active');
-        } else {
-          star.classList.remove('active');
-        }
-      });
-    }
-
     function submitRating() {
-      const feedback = document.getElementById('feedback').value.trim();
-      const message = document.getElementById('message');
-
-      if (selectedRating === 0) {
-        message.style.color = 'red';
-        message.textContent = '⚠ Please select a star rating.';
+      const commentText = document.getElementById('comment').value.trim();
+      if (!selectedRating || !commentText) {
+        alert('Please select a rating and write a comment!');
         return;
       }
 
-      if (feedback.length === 0) {
-        message.style.color = 'red';
-        message.textContent = '⚠ Please enter some feedback.';
-        return;
-      }
+      const commentList = document.getElementById('commentList');
+      const commentItem = document.createElement('div');
+      commentItem.className = 'comment-item';
+      commentItem.innerHTML = `<strong>⭐ ${selectedRating} Stars</strong><br>${commentText}`;
+      commentList.prepend(commentItem);
 
-      // Here you would normally send to server or save it
-      message.style.color = 'green';
-      message.textContent = '✅ Thank you for your feedback!';
-
-      // Optionally clear form
+      // 清空输入
+      document.getElementById('comment').value = '';
       selectedRating = 0;
-      updateStars();
-      document.getElementById('feedback').value = '';
-    }
-
-    function goBack() {
-      window.location.href = 'index.html';
+      stars.forEach(s => s.classList.remove('selected'));
     }
   </script>
 </body>
