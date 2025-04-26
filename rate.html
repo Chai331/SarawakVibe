@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rate SarawakVibe</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 30px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .rating span {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .rating span:hover,
+    .rating span.active {
+      color: gold;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    .back-button {
+      display: block;
+      margin: 20px auto 0;
+      text-align: center;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Rate Your Experience</h2>
+
+    <div class="rating" id="starRating">
+      <span data-value="1">&#9734;</span>
+      <span data-value="2">&#9734;</span>
+      <span data-value="3">&#9734;</span>
+      <span data-value="4">&#9734;</span>
+      <span data-value="5">&#9734;</span>
+    </div>
+
+    <textarea id="feedback" placeholder="Tell us what you think..."></textarea>
+
+    <button onclick="submitRating()">Submit Rating</button>
+
+    <div class="message" id="message"></div>
+
+    <div class="back-button" onclick="goBack()">⬅ Back to Home</div>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll('#starRating span');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        selectedRating = parseInt(star.getAttribute('data-value'));
+        updateStars();
+      });
+    });
+
+    function updateStars() {
+      stars.forEach(star => {
+        if (parseInt(star.getAttribute('data-value')) <= selectedRating) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }
+
+    function submitRating() {
+      const feedback = document.getElementById('feedback').value.trim();
+      const message = document.getElementById('message');
+
+      if (selectedRating === 0) {
+        message.style.color = 'red';
+        message.textContent = '⚠ Please select a star rating.';
+        return;
+      }
+
+      if (feedback.length === 0) {
+        message.style.color = 'red';
+        message.textContent = '⚠ Please enter some feedback.';
+        return;
+      }
+
+      // Here you would normally send to server or save it
+      message.style.color = 'green';
+      message.textContent = '✅ Thank you for your feedback!';
+
+      // Optionally clear form
+      selectedRating = 0;
+      updateStars();
+      document.getElementById('feedback').value = '';
+    }
+
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
