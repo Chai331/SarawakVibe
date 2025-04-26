@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .gallery img {
+      width: 30%;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      color: blue;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content" id="detailContent">
+    <h2>Loading...</h2>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const province = params.get('province');
+    const type = params.get('type');
+    const id = parseInt(params.get('id'));
+
+    async function loadDetail() {
+      if (!province || !type || isNaN(id)) {
+        document.getElementById('detailContent').innerHTML = '<p>Error loading details.</p>';
+        return;
+      }
+
+      const jsonFile = `${province}_${type}.json`;
+      const prefixMap = {
+        'sriaman': 'sri',
+        'sarikei': 'sar',
+        'mukah': 'muk',
+        'limbang': 'lim',
+        'betong': 'bet',
+        'kapit': 'kap',
+        'samarahan': 'smrh',
+        'serian': 'ser',
+        'bintulu': 'btl',
+        'miri': 'miri',
+        'sibu': 'sibu',
+        'kuching': 'kch'
+      };
+      const typeMap = {
+        restaurant: 'res',
+        shopping: 'shop',
+        accommodation: 'hotel',
+        attraction: 'att'
+      };
+
+      try {
+        const response = await fetch(jsonFile);
+        if (!response.ok) throw new Error("File not found");
+        const places = await response.json();
+        const place = places[id];
+        const prefix = prefixMap[province] || 'kch';
+        const imagePrefix = typeMap[type] || type.slice(0, 3);
+
+        let imagesHTML = '';
+        for (let i = 0; i < 3; i++) {
+          imagesHTML += `<img src="https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg" alt="${place.name}">`;
+        }
+
+        document.getElementById('detailContent').innerHTML = `
+          <h2>${place.name}</h2>
+          <div class="gallery">${imagesHTML}</div>
+          <p><strong>Introduction:</strong> ${place.features || place.description}</p>
+          <p><strong>Location:</strong> ${place.address}</p>
+          <p><strong>Business Hours:</strong> ${place.businessHours}</p>
+          <p><strong>Contact:</strong> ${place.contact}</p>
+          <a href="javascript:history.back()">← Back</a>
+        `;
+      } catch (err) {
+        console.error("Error loading detail:", err);
+        document.getElementById('detailContent').innerHTML = '<p>Failed to load details.</p>';
+      }
+    }
+
+    loadDetail();
+  </script>
+</body>
+</html>
