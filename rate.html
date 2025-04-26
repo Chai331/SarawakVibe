@@ -1,127 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rate and Comment</title>
   <style>
     body {
+      margin: 0;
+      padding: 30px;
       font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f5f5f5;
+      background-color: #f4f4f4;
     }
-    .container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      padding: 8px 15px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
       max-width: 600px;
       margin: auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+
     h2 {
       text-align: center;
+      margin-bottom: 20px;
     }
+
     .stars {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
+      text-align: center;
+      margin-bottom: 20px;
     }
-    .star {
+
+    .stars span {
       font-size: 30px;
       cursor: pointer;
       color: lightgray;
     }
-    .star.selected {
+
+    .stars span.selected {
       color: gold;
     }
+
     textarea {
       width: 100%;
       height: 100px;
-      margin-top: 10px;
+      margin-bottom: 20px;
       padding: 10px;
-      border-radius: 8px;
+      border-radius: 5px;
       border: 1px solid #ccc;
       font-size: 1rem;
+      resize: none;
     }
-    button.submit-btn {
-      margin-top: 10px;
+
+    .submit-button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background-color: #ffcc00;
       border: none;
       border-radius: 8px;
-      font-size: 1.1rem;
       font-weight: bold;
+      font-size: 1rem;
       cursor: pointer;
     }
-    .comments {
-      margin-top: 20px;
+
+    .submit-button:hover {
+      background-color: #e6b800;
     }
+
+    .comments-section {
+      margin-top: 30px;
+    }
+
     .comment-item {
-      background: #f0f0f0;
-      padding: 10px;
+      background: #f9f9f9;
+      padding: 15px;
       border-radius: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .comment-rating {
+      color: gold;
+      margin-bottom: 5px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h2 id="placeTitle">Rating</h2>
 
-    <div class="stars" id="starContainer">
-      <span class="star" data-value="1">&#9733;</span>
-      <span class="star" data-value="2">&#9733;</span>
-      <span class="star" data-value="3">&#9733;</span>
-      <span class="star" data-value="4">&#9733;</span>
-      <span class="star" data-value="5">&#9733;</span>
+  <div class="top-bar">
+    <button class="back-button" onclick="goBack()">⬅ Return</button>
+  </div>
+
+  <div class="card">
+    <h2 id="placeTitle">Rate and Comment</h2>
+
+    <div class="stars" id="starsContainer">
+      <!-- Stars will be added by JavaScript -->
     </div>
 
-    <textarea id="comment" placeholder="Write your comment here..."></textarea>
-    <button class="submit-btn" onclick="submitRating()">Submit</button>
+    <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
 
-    <div class="comments" id="commentsSection">
+    <button class="submit-button" onclick="submitComment()">Submit</button>
+
+    <div class="comments-section">
       <h3>Comments:</h3>
-      <div id="commentList"></div>
+      <div id="commentsList">
+        <!-- Comments will appear here -->
+      </div>
     </div>
   </div>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const placeName = urlParams.get('place') || "Place";
-    document.getElementById('placeTitle').innerText = `Rate and Comment for: ${placeName}`;
+    const place = urlParams.get('place');
+    document.getElementById('placeTitle').innerText = `Rate and Comment for: ${place}`;
 
-    const stars = document.querySelectorAll('.star');
+    const starsContainer = document.getElementById('starsContainer');
     let selectedRating = 0;
 
-    stars.forEach(star => {
-      star.addEventListener('click', () => {
-        selectedRating = star.dataset.value;
-        stars.forEach(s => s.classList.remove('selected'));
-        for (let i = 0; i < selectedRating; i++) {
-          stars[i].classList.add('selected');
-        }
-      });
-    });
+    // Generate stars
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement('span');
+      star.innerHTML = '★';
+      star.dataset.value = i;
+      star.onclick = function() {
+        selectedRating = parseInt(this.dataset.value);
+        updateStars();
+      };
+      starsContainer.appendChild(star);
+    }
 
-    function submitRating() {
-      const commentText = document.getElementById('comment').value.trim();
-      if (!selectedRating || !commentText) {
+    function updateStars() {
+      const stars = document.querySelectorAll('.stars span');
+      stars.forEach(star => {
+        star.classList.toggle('selected', parseInt(star.dataset.value) <= selectedRating);
+      });
+    }
+
+    function submitComment() {
+      const commentText = document.getElementById('commentInput').value.trim();
+      if (!commentText || selectedRating === 0) {
         alert('Please select a rating and write a comment!');
         return;
       }
 
-      const commentList = document.getElementById('commentList');
-      const commentItem = document.createElement('div');
-      commentItem.className = 'comment-item';
-      commentItem.innerHTML = `<strong>⭐ ${selectedRating} Stars</strong><br>${commentText}`;
-      commentList.prepend(commentItem);
+      const commentData = {
+        rating: selectedRating,
+        text: commentText,
+        time: new Date().toLocaleString()
+      };
 
-      // 清空输入
-      document.getElementById('comment').value = '';
+      let existingComments = JSON.parse(localStorage.getItem(`comments_${place}`)) || [];
+      existingComments.push(commentData);
+      localStorage.setItem(`comments_${place}`, JSON.stringify(existingComments));
+
+      document.getElementById('commentInput').value = '';
       selectedRating = 0;
-      stars.forEach(s => s.classList.remove('selected'));
+      updateStars();
+      loadComments();
     }
+
+    function loadComments() {
+      const commentsList = document.getElementById('commentsList');
+      commentsList.innerHTML = '';
+
+      const comments = JSON.parse(localStorage.getItem(`comments_${place}`)) || [];
+
+      comments.forEach(comment => {
+        const commentItem = document.createElement('div');
+        commentItem.className = 'comment-item';
+
+        const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
+
+        commentItem.innerHTML = `
+          <div class="comment-rating">${stars}</div>
+          <div class="comment-text">${comment.text}</div>
+          <div style="font-size:0.8rem; color:gray; margin-top:5px;">${comment.time}</div>
+        `;
+
+        commentsList.appendChild(commentItem);
+      });
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+
+    window.onload = loadComments;
   </script>
+
 </body>
 </html>
