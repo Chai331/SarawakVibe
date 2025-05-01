@@ -99,7 +99,6 @@
     <h2>Loading...</h2>
   </div>
 
-  <!-- 🔽 留言区域 -->
   <div class="content">
     <h3>Rate and Comment</h3>
     <textarea id="commentInput" placeholder="Write your comment..."></textarea><br>
@@ -107,7 +106,6 @@
     <ul id="commentList"></ul>
   </div>
 
-  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
 
@@ -117,7 +115,6 @@
     const type = params.get('type');
     const id = parseInt(params.get('id'));
 
-    // ✅ Firebase 配置（你的）
     const firebaseConfig = {
       apiKey: "AIzaSyBMM2kYlMH4Hok98SPYc4MVgfygK2ZUqZU",
       authDomain: "sarawakvibecomment.firebaseapp.com",
@@ -131,7 +128,6 @@
     const app = firebase.initializeApp(firebaseConfig);
     const database = firebase.database();
 
-    // ✅ 加载景点详情
     async function loadDetail() {
       if (!province || !type || isNaN(id)) {
         document.getElementById('detailContent').innerHTML = '<p>Error loading details.</p>';
@@ -188,7 +184,6 @@
       }
     }
 
-    // ✅ 发送留言
     function submitComment() {
       const commentText = document.getElementById('commentInput').value.trim();
       const placeName = document.getElementById('placeName')?.innerText;
@@ -203,7 +198,6 @@
       document.getElementById('commentInput').value = '';
     }
 
-    // ✅ 实时显示留言
     function loadComments() {
       const placeName = document.getElementById('placeName')?.innerText;
       if (!placeName) return;
@@ -220,7 +214,6 @@
       });
     }
 
-    // 返回上一页
     function goBack() {
       history.back();
     }
