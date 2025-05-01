@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Place Details</title>
   <style>
@@ -69,16 +69,28 @@
     .rate-button:hover {
       background-color: #e6b800;
     }
-    @media (max-width: 600px) {
-      .gallery img {
-        width: 100%;
-      }
+    #commentInput {
+      width: 100%;
+      height: 80px;
+      margin-top: 30px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #commentList {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+    #commentList li {
+      margin-bottom: 10px;
+      background: #f9f9f9;
+      padding: 8px 12px;
+      border-radius: 6px;
+      list-style-type: none;
     }
   </style>
 </head>
 
 <body>
-
   <div class="top-bar">
     <button class="back-button" onclick="goBack()">⬅ Return</button>
   </div>
@@ -87,12 +99,39 @@
     <h2>Loading...</h2>
   </div>
 
+  <!-- 🔽 留言区域 -->
+  <div class="content">
+    <h3>Rate and Comment</h3>
+    <textarea id="commentInput" placeholder="Write your comment..."></textarea><br>
+    <button class="rate-button" onclick="submitComment()">Submit</button>
+    <ul id="commentList"></ul>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+
   <script>
     const params = new URLSearchParams(window.location.search);
     const province = params.get('province');
     const type = params.get('type');
     const id = parseInt(params.get('id'));
 
+    // ✅ Firebase 配置（你的）
+    const firebaseConfig = {
+      apiKey: "AIzaSyBMM2kYlMH4Hok98SPYc4MVgfygK2ZUqZU",
+      authDomain: "sarawakvibecomment.firebaseapp.com",
+      databaseURL: "https://sarawakvibecomment-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "sarawakvibecomment",
+      storageBucket: "sarawakvibecomment.firebasestorage.app",
+      messagingSenderId: "940933538424",
+      appId: "1:940933538424:web:f70b7647aac4f0a040038d",
+      measurementId: "G-ZCXD7RHR4Z"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    // ✅ 加载景点详情
     async function loadDetail() {
       if (!province || !type || isNaN(id)) {
         document.getElementById('detailContent').innerHTML = '<p>Error loading details.</p>';
@@ -135,13 +174,12 @@
           <div class="place-detail">
             <h2 id="placeName">${place.name}</h2>
             <div class="gallery">
-              <img id="placeImage" src="https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg" alt="${place.name}">
+              <img src="https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg" alt="${place.name}">
             </div>
             <p><strong>Introduction:</strong> ${place.features || place.description || 'No description available.'}</p>
             <p><strong>Location:</strong> ${place.address || 'No address provided.'}</p>
             <p><strong>Business Hours:</strong> ${place.businessHours || 'No business hours available.'}</p>
             <p><strong>Contact:</strong> ${place.contact || 'No contact provided.'}</p>
-            <button class="rate-button" onclick="goRate()">⭐ Rate and Comment</button>
           </div>
         `;
       } catch (err) {
@@ -150,17 +188,44 @@
       }
     }
 
+    // ✅ 发送留言
+    function submitComment() {
+      const commentText = document.getElementById('commentInput').value.trim();
+      const placeName = document.getElementById('placeName')?.innerText;
+
+      if (!commentText || !placeName) return;
+
+      database.ref('comments/' + placeName).push({
+        text: commentText,
+        timestamp: Date.now()
+      });
+
+      document.getElementById('commentInput').value = '';
+    }
+
+    // ✅ 实时显示留言
+    function loadComments() {
+      const placeName = document.getElementById('placeName')?.innerText;
+      if (!placeName) return;
+
+      const commentList = document.getElementById('commentList');
+      database.ref('comments/' + placeName).on('value', (snapshot) => {
+        commentList.innerHTML = '';
+        snapshot.forEach(child => {
+          const comment = child.val();
+          const li = document.createElement('li');
+          li.textContent = comment.text;
+          commentList.appendChild(li);
+        });
+      });
+    }
+
+    // 返回上一页
     function goBack() {
       history.back();
     }
 
-    function goRate() {
-      const placeName = document.getElementById('placeName')?.innerText;
-      if (!placeName) return;
-      window.location.href = `rate.html?place=${encodeURIComponent(placeName)}`;
-    }
-
-    loadDetail();
+    loadDetail().then(() => setTimeout(loadComments, 500));
   </script>
 </body>
 </html>
