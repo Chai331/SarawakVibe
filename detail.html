@@ -5,7 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Place Details</title>
   <style>
-    /* Your existing styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .top-bar {
+      margin-bottom: 20px;
+    }
+    .back-button {
+      padding: 10px 15px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    .place-detail {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .gallery {
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      width: 300px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    h2 {
+      font-size: 28px;
+      margin-top: 0;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    strong {
+      font-size: 20px;
+    }
+    .rate-button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .rate-button:hover {
+      background-color: #e6b800;
+    }
+    #commentInput {
+      width: 100%;
+      height: 80px;
+      margin-top: 30px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #commentList {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+    #commentList li {
+      margin-bottom: 10px;
+      background: #f9f9f9;
+      padding: 8px 12px;
+      border-radius: 6px;
+      list-style-type: none;
+    }
   </style>
 </head>
 
@@ -20,7 +101,8 @@
 
   <div class="content">
     <h3>Rate and Comment</h3>
-    <button class="rate-button" onclick="goToRatePage()">Rate and Comment</button>
+    <textarea id="commentInput" placeholder="Write your comment..."></textarea><br>
+    <button class="rate-button" onclick="submitComment()">Submit</button>
     <ul id="commentList"></ul>
   </div>
 
@@ -34,9 +116,15 @@
     const id = parseInt(params.get('id'));
 
     const firebaseConfig = {
-      // Firebase configuration here
+      apiKey: "AIzaSyBMM2kYlMH4Hok98SPYc4MVgfygK2ZUqZU",
+      authDomain: "sarawakvibecomment.firebaseapp.com",
+      databaseURL: "https://sarawakvibecomment-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "sarawakvibecomment",
+      storageBucket: "sarawakvibecomment.firebasestorage.app",
+      messagingSenderId: "940933538424",
+      appId: "1:940933538424:web:f70b7647aac4f0a040038d",
+      measurementId: "G-ZCXD7RHR4Z"
     };
-
     const app = firebase.initializeApp(firebaseConfig);
     const database = firebase.database();
 
@@ -46,15 +134,26 @@
         return;
       }
 
-      const jsonFile = `${province}_${type}.json`;
+      const jsonFile = ${province}_${type}.json;
       const prefixMap = {
         'sriaman': 'sri',
-        // other province mappings...
+        'sarikei': 'sar',
+        'mukah': 'muk',
+        'limbang': 'lim',
+        'betong': 'bet',
+        'kapit': 'kap',
+        'samarahan': 'smrh',
+        'serian': 'ser',
+        'bintulu': 'btl',
+        'miri': 'miri',
+        'sibu': 'sibu',
+        'kuching': 'kch'
       };
-
       const typeMap = {
-        'restaurant': 'res',
-        // other type mappings...
+        restaurant: 'res',
+        shopping: 'shop',
+        accommodation: 'hotel',
+        attraction: 'att'
       };
 
       try {
@@ -67,7 +166,7 @@
         const prefix = prefixMap[province] || 'kch';
         const imagePrefix = typeMap[type] || type.slice(0, 3);
 
-        document.getElementById('detailContent').innerHTML = `
+        document.getElementById('detailContent').innerHTML = 
           <div class="place-detail">
             <h2 id="placeName">${place.name}</h2>
             <div class="gallery">
@@ -78,18 +177,25 @@
             <p><strong>Business Hours:</strong> ${place.businessHours || 'No business hours available.'}</p>
             <p><strong>Contact:</strong> ${place.contact || 'No contact provided.'}</p>
           </div>
-        `;
+        ;
       } catch (err) {
         console.error("Error loading detail:", err);
         document.getElementById('detailContent').innerHTML = '<p>Failed to load details.</p>';
       }
     }
 
-    function goToRatePage() {
+    function submitComment() {
+      const commentText = document.getElementById('commentInput').value.trim();
       const placeName = document.getElementById('placeName')?.innerText;
-      if (placeName) {
-        window.location.href = `rate.html?place=${encodeURIComponent(placeName)}`;
-      }
+
+      if (!commentText || !placeName) return;
+
+      database.ref('comments/' + placeName).push({
+        text: commentText,
+        timestamp: Date.now()
+      });
+
+      document.getElementById('commentInput').value = '';
     }
 
     function loadComments() {
