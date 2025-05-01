@@ -110,9 +110,7 @@
   <div class="card">
     <h2 id="placeTitle">Rate and Comment</h2>
 
-    <div class="stars" id="starsContainer">
-      <!-- Stars will be added by JavaScript -->
-    </div>
+    <div class="stars" id="starsContainer"></div>
 
     <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
 
@@ -120,13 +118,28 @@
 
     <div class="comments-section">
       <h3>Comments:</h3>
-      <div id="commentsList">
-        <!-- Comments will appear here -->
-      </div>
+      <div id="commentsList"></div>
     </div>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+
   <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBMM2kYlMH4Hok98SPYc4MVgfygK2ZUqZU",
+      authDomain: "sarawakvibecomment.firebaseapp.com",
+      databaseURL: "https://sarawakvibecomment-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "sarawakvibecomment",
+      storageBucket: "sarawakvibecomment.firebasestorage.app",
+      messagingSenderId: "940933538424",
+      appId: "1:940933538424:web:f70b7647aac4f0a040038d",
+      measurementId: "G-ZCXD7RHR4Z"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
     const urlParams = new URLSearchParams(window.location.search);
     const place = urlParams.get('place');
     document.getElementById('placeTitle').innerText = `Rate and Comment for: ${place}`;
@@ -134,12 +147,11 @@
     const starsContainer = document.getElementById('starsContainer');
     let selectedRating = 0;
 
-    // Generate stars
     for (let i = 1; i <= 5; i++) {
       const star = document.createElement('span');
       star.innerHTML = '★';
       star.dataset.value = i;
-      star.onclick = function() {
+      star.onclick = function () {
         selectedRating = parseInt(this.dataset.value);
         updateStars();
       };
@@ -166,35 +178,29 @@
         time: new Date().toLocaleString()
       };
 
-      let existingComments = JSON.parse(localStorage.getItem(`comments_${place}`)) || [];
-      existingComments.push(commentData);
-      localStorage.setItem(`comments_${place}`, JSON.stringify(existingComments));
+      database.ref('comments/' + place).push(commentData);
 
       document.getElementById('commentInput').value = '';
       selectedRating = 0;
       updateStars();
-      loadComments();
     }
 
     function loadComments() {
       const commentsList = document.getElementById('commentsList');
-      commentsList.innerHTML = '';
-
-      const comments = JSON.parse(localStorage.getItem(`comments_${place}`)) || [];
-
-      comments.forEach(comment => {
-        const commentItem = document.createElement('div');
-        commentItem.className = 'comment-item';
-
-        const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
-
-        commentItem.innerHTML = `
-          <div class="comment-rating">${stars}</div>
-          <div class="comment-text">${comment.text}</div>
-          <div style="font-size:0.8rem; color:gray; margin-top:5px;">${comment.time}</div>
-        `;
-
-        commentsList.appendChild(commentItem);
+      database.ref('comments/' + place).on('value', snapshot => {
+        commentsList.innerHTML = '';
+        snapshot.forEach(child => {
+          const comment = child.val();
+          const item = document.createElement('div');
+          item.className = 'comment-item';
+          const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
+          item.innerHTML = `
+            <div class="comment-rating">${stars}</div>
+            <div class="comment-text">${comment.text}</div>
+            <div style="font-size: 0.8rem; color: gray;">${comment.time}</div>
+          `;
+          commentsList.appendChild(item);
+        });
       });
     }
 
@@ -204,6 +210,5 @@
 
     window.onload = loadComments;
   </script>
-
 </body>
 </html>
