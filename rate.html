@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rate and Comment</title>
+  <title>评分与评论</title>
   <style>
     body {
       margin: 0;
@@ -11,11 +11,13 @@
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
     }
+
     .top-bar {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
     }
+
     .back-button {
       padding: 8px 15px;
       background-color: #ffcc00;
@@ -24,6 +26,7 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     .card {
       background: white;
       padding: 30px;
@@ -32,22 +35,27 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+
     h2 {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .stars {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .stars span {
       font-size: 30px;
       cursor: pointer;
       color: lightgray;
     }
+
     .stars span.selected {
       color: gold;
     }
+
     textarea {
       width: 100%;
       height: 100px;
@@ -58,6 +66,7 @@
       font-size: 1rem;
       resize: none;
     }
+
     .submit-button {
       width: 100%;
       padding: 12px;
@@ -68,12 +77,15 @@
       font-size: 1rem;
       cursor: pointer;
     }
+
     .submit-button:hover {
       background-color: #e6b800;
     }
+
     .comments-section {
       margin-top: 30px;
     }
+
     .comment-item {
       background: #f9f9f9;
       padding: 15px;
@@ -81,40 +93,48 @@
       margin-bottom: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+
     .comment-rating {
       color: gold;
       margin-bottom: 5px;
     }
   </style>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 </head>
 
 <body>
 
   <div class="top-bar">
-    <button class="back-button" onclick="goBack()">⬅ Return</button>
+    <button class="back-button" onclick="goBack()">⬅ 返回</button>
   </div>
 
   <div class="card">
-    <h2 id="placeTitle">Rate and Comment</h2>
+    <h2 id="placeTitle">评分与评论</h2>
 
     <div class="stars" id="starsContainer"></div>
 
-    <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
+    <textarea id="commentInput" placeholder="在此填写您的评论..."></textarea>
 
-    <button class="submit-button" onclick="submitComment()">Submit</button>
+    <button class="submit-button" onclick="submitComment()">提交</button>
 
     <div class="comments-section">
-      <h3>Comments:</h3>
-      <div id="commentsList"></div>
+      <h3>评论：</h3>
+      <div id="commentsList">
+        <!-- 评论将在这里显示 -->
+      </div>
     </div>
   </div>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"></script>
-
   <script>
-    // Firebase Config
+    // 获取 URL 参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const place = urlParams.get('place') || '未知地点';
+    document.getElementById('placeTitle').innerText = `评分与评论：${place}`;
+
+    // 初始化 Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyBMM2kYlMH4Hok98SPYc4MVgfygK2ZUqZU",
       authDomain: "sarawakvibecomment.firebaseapp.com",
@@ -126,24 +146,18 @@
       measurementId: "G-ZCXD7RHR4Z"
     };
 
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
 
-    // Get place name from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const place = urlParams.get('place');
-    document.getElementById('placeTitle').innerText = `Rate and Comment for: ${place}`;
-
+    // 星级评分
     const starsContainer = document.getElementById('starsContainer');
     let selectedRating = 0;
 
-    // Generate star rating UI
     for (let i = 1; i <= 5; i++) {
       const star = document.createElement('span');
       star.innerHTML = '★';
       star.dataset.value = i;
-      star.onclick = function() {
+      star.onclick = function () {
         selectedRating = parseInt(this.dataset.value);
         updateStars();
       };
@@ -160,7 +174,7 @@
     function submitComment() {
       const commentText = document.getElementById('commentInput').value.trim();
       if (!commentText || selectedRating === 0) {
-        alert('Please select a rating and write a comment!');
+        alert('请给予评分并填写评论！');
         return;
       }
 
@@ -170,45 +184,36 @@
         time: new Date().toLocaleString()
       };
 
-      const commentRef = db.ref('comments/' + place);
-      commentRef.push(commentData)
-        .then(() => {
-          document.getElementById('commentInput').value = '';
-          selectedRating = 0;
-          updateStars();
-          loadComments();
-        })
-        .catch(error => {
-          alert('Error submitting comment: ' + error.message);
-        });
+      // 存储到 Firebase（以地点为键名）
+      db.ref(`comments/${place}`).push(commentData);
+
+      document.getElementById('commentInput').value = '';
+      selectedRating = 0;
+      updateStars();
+      loadComments();
     }
 
     function loadComments() {
       const commentsList = document.getElementById('commentsList');
-      commentsList.innerHTML = '';
+      commentsList.innerHTML = '<p>加载中...</p>';
 
-      const commentRef = db.ref('comments/' + place);
-      commentRef.once('value', snapshot => {
+      db.ref(`comments/${place}`).once('value', snapshot => {
         const data = snapshot.val();
+        commentsList.innerHTML = '';
         if (!data) {
-          commentsList.innerHTML = '<p>No comments yet.</p>';
+          commentsList.innerHTML = '<p>暂无评论。</p>';
           return;
         }
 
-        const entries = Object.values(data).reverse(); // Show newest first
-
-        entries.forEach(comment => {
+        Object.values(data).forEach(comment => {
           const commentItem = document.createElement('div');
           commentItem.className = 'comment-item';
-
           const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
-
           commentItem.innerHTML = `
             <div class="comment-rating">${stars}</div>
             <div class="comment-text">${comment.text}</div>
             <div style="font-size:0.8rem; color:gray; margin-top:5px;">${comment.time}</div>
           `;
-
           commentsList.appendChild(commentItem);
         });
       });
