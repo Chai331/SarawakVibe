@@ -19,7 +19,7 @@
     }
     .gallery {
       display: flex;
-      justify-content: flex-start; /* 🔥 图片靠左 */
+      justify-content: flex-start;
       margin-bottom: 20px;
     }
     .gallery img {
@@ -60,7 +60,7 @@
         return;
       }
 
-      const jsonFile = `${province}_${type}.json`;
+      const jsonFile = `data/${province}/${type}.json`;
       const prefixMap = {
         'sriaman': 'sri',
         'sarikei': 'sar',
