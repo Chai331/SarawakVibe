@@ -11,13 +11,11 @@
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
     }
-
     .top-bar {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
     }
-
     .back-button {
       padding: 8px 15px;
       background-color: #ffcc00;
@@ -26,7 +24,6 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .card {
       background: white;
       padding: 30px;
@@ -35,27 +32,22 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
     h2 {
       text-align: center;
       margin-bottom: 20px;
     }
-
     .stars {
       text-align: center;
       margin-bottom: 20px;
     }
-
     .stars span {
       font-size: 30px;
       cursor: pointer;
       color: lightgray;
     }
-
     .stars span.selected {
       color: gold;
     }
-
     textarea {
       width: 100%;
       height: 100px;
@@ -66,7 +58,6 @@
       font-size: 1rem;
       resize: none;
     }
-
     .submit-button {
       width: 100%;
       padding: 12px;
@@ -77,15 +68,12 @@
       font-size: 1rem;
       cursor: pointer;
     }
-
     .submit-button:hover {
       background-color: #e6b800;
     }
-
     .comments-section {
       margin-top: 30px;
     }
-
     .comment-item {
       background: #f9f9f9;
       padding: 15px;
@@ -93,7 +81,6 @@
       margin-bottom: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-
     .comment-rating {
       color: gold;
       margin-bottom: 5px;
@@ -110,9 +97,7 @@
   <div class="card">
     <h2 id="placeTitle">Rate and Comment</h2>
 
-    <div class="stars" id="starsContainer">
-      <!-- Stars will be added by JavaScript -->
-    </div>
+    <div class="stars" id="starsContainer"></div>
 
     <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
 
@@ -120,13 +105,32 @@
 
     <div class="comments-section">
       <h3>Comments:</h3>
-      <div id="commentsList">
-        <!-- Comments will appear here -->
-      </div>
+      <div id="commentsList"></div>
     </div>
   </div>
 
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"></script>
+
   <script>
+    // Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyBMM2kYlMH4Hok98SPYc4MVgfygK2ZUqZU",
+      authDomain: "sarawakvibecomment.firebaseapp.com",
+      databaseURL: "https://sarawakvibecomment-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "sarawakvibecomment",
+      storageBucket: "sarawakvibecomment.appspot.com",
+      messagingSenderId: "940933538424",
+      appId: "1:940933538424:web:f70b7647aac4f0a040038d",
+      measurementId: "G-ZCXD7RHR4Z"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Get place name from URL
     const urlParams = new URLSearchParams(window.location.search);
     const place = urlParams.get('place');
     document.getElementById('placeTitle').innerText = `Rate and Comment for: ${place}`;
@@ -134,7 +138,7 @@
     const starsContainer = document.getElementById('starsContainer');
     let selectedRating = 0;
 
-    // Generate stars
+    // Generate star rating UI
     for (let i = 1; i <= 5; i++) {
       const star = document.createElement('span');
       star.innerHTML = '★';
@@ -166,35 +170,47 @@
         time: new Date().toLocaleString()
       };
 
-      let existingComments = JSON.parse(localStorage.getItem(`comments_${place}`)) || [];
-      existingComments.push(commentData);
-      localStorage.setItem(`comments_${place}`, JSON.stringify(existingComments));
-
-      document.getElementById('commentInput').value = '';
-      selectedRating = 0;
-      updateStars();
-      loadComments();
+      const commentRef = db.ref('comments/' + place);
+      commentRef.push(commentData)
+        .then(() => {
+          document.getElementById('commentInput').value = '';
+          selectedRating = 0;
+          updateStars();
+          loadComments();
+        })
+        .catch(error => {
+          alert('Error submitting comment: ' + error.message);
+        });
     }
 
     function loadComments() {
       const commentsList = document.getElementById('commentsList');
       commentsList.innerHTML = '';
 
-      const comments = JSON.parse(localStorage.getItem(`comments_${place}`)) || [];
+      const commentRef = db.ref('comments/' + place);
+      commentRef.once('value', snapshot => {
+        const data = snapshot.val();
+        if (!data) {
+          commentsList.innerHTML = '<p>No comments yet.</p>';
+          return;
+        }
 
-      comments.forEach(comment => {
-        const commentItem = document.createElement('div');
-        commentItem.className = 'comment-item';
+        const entries = Object.values(data).reverse(); // Show newest first
 
-        const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
+        entries.forEach(comment => {
+          const commentItem = document.createElement('div');
+          commentItem.className = 'comment-item';
 
-        commentItem.innerHTML = `
-          <div class="comment-rating">${stars}</div>
-          <div class="comment-text">${comment.text}</div>
-          <div style="font-size:0.8rem; color:gray; margin-top:5px;">${comment.time}</div>
-        `;
+          const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
 
-        commentsList.appendChild(commentItem);
+          commentItem.innerHTML = `
+            <div class="comment-rating">${stars}</div>
+            <div class="comment-text">${comment.text}</div>
+            <div style="font-size:0.8rem; color:gray; margin-top:5px;">${comment.time}</div>
+          `;
+
+          commentsList.appendChild(commentItem);
+        });
       });
     }
 
