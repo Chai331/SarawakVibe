@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>评分与评论</title>
+  <title>Rate and Comment</title>
   <style>
     body {
       margin: 0;
@@ -108,33 +108,33 @@
 <body>
 
   <div class="top-bar">
-    <button class="back-button" onclick="goBack()">⬅ 返回</button>
+    <button class="back-button" onclick="goBack()">⬅ Back</button>
   </div>
 
   <div class="card">
-    <h2 id="placeTitle">评分与评论</h2>
+    <h2 id="placeTitle">Rate and Comment</h2>
 
     <div class="stars" id="starsContainer"></div>
 
-    <textarea id="commentInput" placeholder="在此填写您的评论..."></textarea>
+    <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
 
-    <button class="submit-button" onclick="submitComment()">提交</button>
+    <button class="submit-button" onclick="submitComment()">Submit</button>
 
     <div class="comments-section">
-      <h3>评论：</h3>
+      <h3>Comments:</h3>
       <div id="commentsList">
-        <!-- 评论将在这里显示 -->
+        <!-- Comments will appear here -->
       </div>
     </div>
   </div>
 
   <script>
-    // 获取 URL 参数
+    // Get URL parameter
     const urlParams = new URLSearchParams(window.location.search);
-    const place = urlParams.get('place') || '未知地点';
-    document.getElementById('placeTitle').innerText = `评分与评论：${place}`;
+    const place = urlParams.get('place') || 'Unknown Place';
+    document.getElementById('placeTitle').innerText = `Rate and Comment: ${place}`;
 
-    // 初始化 Firebase
+    // Firebase config
     const firebaseConfig = {
       apiKey: "AIzaSyBMM2kYlMH4Hok98SPYc4MVgfygK2ZUqZU",
       authDomain: "sarawakvibecomment.firebaseapp.com",
@@ -149,7 +149,7 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
 
-    // 星级评分
+    // Star rating logic
     const starsContainer = document.getElementById('starsContainer');
     let selectedRating = 0;
 
@@ -174,7 +174,7 @@
     function submitComment() {
       const commentText = document.getElementById('commentInput').value.trim();
       if (!commentText || selectedRating === 0) {
-        alert('请给予评分并填写评论！');
+        alert('Please select a rating and write a comment!');
         return;
       }
 
@@ -184,7 +184,6 @@
         time: new Date().toLocaleString()
       };
 
-      // 存储到 Firebase（以地点为键名）
       db.ref(`comments/${place}`).push(commentData);
 
       document.getElementById('commentInput').value = '';
@@ -195,13 +194,13 @@
 
     function loadComments() {
       const commentsList = document.getElementById('commentsList');
-      commentsList.innerHTML = '<p>加载中...</p>';
+      commentsList.innerHTML = '<p>Loading...</p>';
 
       db.ref(`comments/${place}`).once('value', snapshot => {
         const data = snapshot.val();
         commentsList.innerHTML = '';
         if (!data) {
-          commentsList.innerHTML = '<p>暂无评论。</p>';
+          commentsList.innerHTML = '<p>No comments yet.</p>';
           return;
         }
 
