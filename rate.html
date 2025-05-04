@@ -189,16 +189,23 @@
       document.getElementById('commentInput').value = '';
       selectedRating = 0;
       updateStars();
-      loadComments();
     }
 
-    function loadComments() {
+    let commentsRef;
+
+    function setupRealtimeComments() {
       const commentsList = document.getElementById('commentsList');
       commentsList.innerHTML = '<p>Loading...</p>';
 
-      db.ref(`comments/${place}`).once('value', snapshot => {
+      if (commentsRef) {
+        commentsRef.off();
+      }
+
+      commentsRef = db.ref(`comments/${place}`);
+      commentsRef.on('value', snapshot => {
         const data = snapshot.val();
         commentsList.innerHTML = '';
+
         if (!data) {
           commentsList.innerHTML = '<p>No comments yet.</p>';
           return;
@@ -222,7 +229,7 @@
       window.history.back();
     }
 
-    window.onload = loadComments;
+    window.onload = setupRealtimeComments;
   </script>
 
 </body>
