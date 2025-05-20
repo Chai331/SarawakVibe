@@ -88,9 +88,6 @@
   </div>
 
   <script>
-    // ---------------------------
-    // OOP Classes for Place Types
-    // ---------------------------
 
     class Place {
       constructor(data) {
@@ -102,7 +99,7 @@
       }
 
       getExtraInfo() {
-        return ''; // Base class returns nothing special
+        return '';
       }
 
       render(imageUrl) {
@@ -147,9 +144,6 @@
       }
     }
 
-    // ---------------------------
-    // Main Logic
-    // ---------------------------
 
     const params = new URLSearchParams(window.location.search);
     const province = params.get('province');
@@ -186,8 +180,7 @@
         const prefix = prefixMap[province] || 'kch';
         const imagePrefix = typeMap[type] || type.slice(0, 3);
         const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg`;
-
-        // Polymorphism: choose correct class
+s
         let placeObj;
         switch (type) {
           case 'restaurant':
@@ -206,7 +199,6 @@
             placeObj = new Place(placeData);
         }
 
-        // Render place using polymorphic render()
         document.getElementById('detailContent').innerHTML = placeObj.render(imageUrl);
 
       } catch (err) {
