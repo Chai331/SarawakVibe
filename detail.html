@@ -88,6 +88,69 @@
   </div>
 
   <script>
+    // ---------------------------
+    // OOP Classes for Place Types
+    // ---------------------------
+
+    class Place {
+      constructor(data) {
+        this.name = data.name;
+        this.address = data.address || 'No address provided.';
+        this.description = data.features || data.description || 'No description available.';
+        this.businessHours = data.businessHours || 'No business hours available.';
+        this.contact = data.contact || 'No contact provided.';
+      }
+
+      getExtraInfo() {
+        return ''; // Base class returns nothing special
+      }
+
+      render(imageUrl) {
+        return `
+          <div class="place-detail">
+            <h2 id="placeName">${this.name}</h2>
+            <div class="gallery">
+              <img id="placeImage" src="${imageUrl}" alt="${this.name}">
+            </div>
+            <p><strong>Introduction:</strong> ${this.description}</p>
+            <p><strong>Location:</strong> ${this.address}</p>
+            <p><strong>Business Hours:</strong> ${this.businessHours}</p>
+            <p><strong>Contact:</strong> ${this.contact}</p>
+            ${this.getExtraInfo()}
+            <button class="rate-button" onclick="goRate()">⭐ Rate and Comment</button>
+          </div>
+        `;
+      }
+    }
+
+    class Restaurant extends Place {
+      getExtraInfo() {
+        return `<p><em>This is a recommended restaurant in Sarawak.</em></p>`;
+      }
+    }
+
+    class Hotel extends Place {
+      getExtraInfo() {
+        return `<p><em>Book early to get the best rates!</em></p>`;
+      }
+    }
+
+    class Attraction extends Place {
+      getExtraInfo() {
+        return `<p><em>Don’t miss out on this must-visit destination.</em></p>`;
+      }
+    }
+
+    class Shopping extends Place {
+      getExtraInfo() {
+        return `<p><em>Perfect spot for local products and souvenirs.</em></p>`;
+      }
+    }
+
+    // ---------------------------
+    // Main Logic
+    // ---------------------------
+
     const params = new URLSearchParams(window.location.search);
     const province = params.get('province');
     const type = params.get('type');
@@ -101,18 +164,10 @@
 
       const jsonFile = `${province}_${type}.json`;
       const prefixMap = {
-        'sriaman': 'sri',
-        'sarikei': 'sar',
-        'mukah': 'muk',
-        'limbang': 'lim',
-        'betong': 'bet',
-        'kapit': 'kap',
-        'samarahan': 'smrh',
-        'serian': 'ser',
-        'bintulu': 'btl',
-        'miri': 'miri',
-        'sibu': 'sibu',
-        'kuching': 'kch'
+        'sriaman': 'sri', 'sarikei': 'sar', 'mukah': 'muk',
+        'limbang': 'lim', 'betong': 'bet', 'kapit': 'kap',
+        'samarahan': 'smrh', 'serian': 'ser', 'bintulu': 'btl',
+        'miri': 'miri', 'sibu': 'sibu', 'kuching': 'kch'
       };
       const typeMap = {
         restaurant: 'res',
@@ -125,25 +180,35 @@
         const response = await fetch(jsonFile);
         if (!response.ok) throw new Error("File not found");
         const places = await response.json();
-        const place = places[id];
-        if (!place) throw new Error("Place not found");
+        const placeData = places[id];
+        if (!placeData) throw new Error("Place not found");
 
         const prefix = prefixMap[province] || 'kch';
         const imagePrefix = typeMap[type] || type.slice(0, 3);
+        const imageUrl = `https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg`;
 
-        document.getElementById('detailContent').innerHTML = `
-          <div class="place-detail">
-            <h2 id="placeName">${place.name}</h2>
-            <div class="gallery">
-              <img id="placeImage" src="https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg" alt="${place.name}">
-            </div>
-            <p><strong>Introduction:</strong> ${place.features || place.description || 'No description available.'}</p>
-            <p><strong>Location:</strong> ${place.address || 'No address provided.'}</p>
-            <p><strong>Business Hours:</strong> ${place.businessHours || 'No business hours available.'}</p>
-            <p><strong>Contact:</strong> ${place.contact || 'No contact provided.'}</p>
-            <button class="rate-button" onclick="goRate()">⭐ Rate and Comment</button>
-          </div>
-        `;
+        // Polymorphism: choose correct class
+        let placeObj;
+        switch (type) {
+          case 'restaurant':
+            placeObj = new Restaurant(placeData);
+            break;
+          case 'accommodation':
+            placeObj = new Hotel(placeData);
+            break;
+          case 'attraction':
+            placeObj = new Attraction(placeData);
+            break;
+          case 'shopping':
+            placeObj = new Shopping(placeData);
+            break;
+          default:
+            placeObj = new Place(placeData);
+        }
+
+        // Render place using polymorphic render()
+        document.getElementById('detailContent').innerHTML = placeObj.render(imageUrl);
+
       } catch (err) {
         console.error("Error loading detail:", err);
         document.getElementById('detailContent').innerHTML = '<p>Failed to load details.</p>';
