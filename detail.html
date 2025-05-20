@@ -1,166 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Place Details</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place Detail</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 20px;
+      padding: 1rem;
     }
-    .top-bar {
-      margin-bottom: 20px;
-    }
-    .back-button {
-      padding: 10px 15px;
-      background-color: #ffcc00;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .content {
-      background: white;
-      padding: 20px;
+    .card {
+      border: 1px solid #ddd;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 800px;
+      padding: 1rem;
+      max-width: 600px;
       margin: auto;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
-    .place-detail {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .gallery {
-      margin-bottom: 20px;
-    }
-    .gallery img {
-      width: 300px;
-      max-width: 100%;
-      height: auto;
+    img {
+      width: 100%;
       border-radius: 10px;
     }
     h2 {
-      font-size: 28px;
-      margin-top: 0;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 10px 0;
-    }
-    strong {
-      font-size: 20px;
-    }
-    .rate-button {
-      margin-top: 20px;
-      padding: 10px 15px;
-      background-color: #ffcc00;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .rate-button:hover {
-      background-color: #e6b800;
-    }
-    @media (max-width: 600px) {
-      .gallery img {
-        width: 100%;
-      }
+      margin-top: 0.5rem;
     }
   </style>
 </head>
-
 <body>
-
-  <div class="top-bar">
-    <button class="back-button" onclick="goBack()">⬅ Return</button>
-  </div>
-
-  <div class="content" id="detailContent">
-    <h2>Loading...</h2>
-  </div>
+  <h1>Place Details</h1>
+  <div id="place-container"></div>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const province = params.get('province');
-    const type = params.get('type');
-    const id = parseInt(params.get('id'));
 
-    async function loadDetail() {
-      if (!province || !type || isNaN(id)) {
-        document.getElementById('detailContent').innerHTML = '<p>Error loading details.</p>';
-        return;
+    class Place {
+      constructor(name, location, description, image) {
+        this.name = name;
+        this.location = location;
+        this.description = description;
+        this.image = image;
       }
 
-      const jsonFile = `${province}_${type}.json`;
-      const prefixMap = {
-        'sriaman': 'sri',
-        'sarikei': 'sar',
-        'mukah': 'muk',
-        'limbang': 'lim',
-        'betong': 'bet',
-        'kapit': 'kap',
-        'samarahan': 'smrh',
-        'serian': 'ser',
-        'bintulu': 'btl',
-        'miri': 'miri',
-        'sibu': 'sibu',
-        'kuching': 'kch'
-      };
-      const typeMap = {
-        restaurant: 'res',
-        shopping: 'shop',
-        accommodation: 'hotel',
-        attraction: 'att'
-      };
+      render(containerId = 'place-container') {
+        const container = document.getElementById(containerId);
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${this.image}" alt="${this.name}" />
+          <h2>${this.name}</h2>
+          <p><strong>Location:</strong> ${this.location}</p>
+          <p>${this.description}</p>
+        `;
+        container.appendChild(card);
+      }
+    }
+
+    class Restaurant extends Place {
+      constructor(name, location, description, image, cuisine) {
+        super(name, location, description, image);
+        this.cuisine = cuisine;
+      }
+
+      render(containerId = 'place-container') {
+        const container = document.getElementById(containerId);
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${this.image}" alt="${this.name}" />
+          <h2>${this.name} <span style="font-size: 0.8em;">(${this.cuisine})</span></h2>
+          <p><strong>Location:</strong> ${this.location}</p>
+          <p>${this.description}</p>
+        `;
+        container.appendChild(card);
+      }
+    }
+
+    class Hotel extends Place {
+      constructor(name, location, description, image, stars) {
+        super(name, location, description, image);
+        this.stars = stars;
+      }
+
+      render(containerId = 'place-container') {
+        const container = document.getElementById(containerId);
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${this.image}" alt="${this.name}" />
+          <h2>${this.name} ⭐ ${this.stars}</h2>
+          <p><strong>Location:</strong> ${this.location}</p>
+          <p>${this.description}</p>
+        `;
+        container.appendChild(card);
+      }
+    }
+
+    class Attraction extends Place {
+      constructor(name, location, description, image, openHours) {
+        super(name, location, description, image);
+        this.openHours = openHours;
+      }
+
+      render(containerId = 'place-container') {
+        const container = document.getElementById(containerId);
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${this.image}" alt="${this.name}" />
+          <h2>${this.name}</h2>
+          <p><strong>Location:</strong> ${this.location}</p>
+          <p>${this.description}</p>
+          <p><strong>Open Hours:</strong> ${this.openHours}</p>
+        `;
+        container.appendChild(card);
+      }
+    }
+
+    const examplePlaceData = {
+      type: "restaurant",
+      name: "Choon Hui Cafe",
+      location: "Kuching",
+      description: "Famous for Sarawak Laksa and traditional dishes.",
+      image: "https://source.unsplash.com/600x400/?restaurant",
+      cuisine: "Chinese"
+    };
+
+    function loadPlace(data) {
+      let placeObj;
 
       try {
-        const response = await fetch(jsonFile);
-        if (!response.ok) throw new Error("File not found");
-        const places = await response.json();
-        const place = places[id];
-        if (!place) throw new Error("Place not found");
+        switch (data.type) {
+          case "restaurant":
+            placeObj = new Restaurant(data.name, data.location, data.description, data.image, data.cuisine);
+            break;
+          case "hotel":
+            placeObj = new Hotel(data.name, data.location, data.description, data.image, data.stars || 3);
+            break;
+          case "attraction":
+            placeObj = new Attraction(data.name, data.location, data.description, data.image, data.openHours || "9AM - 6PM");
+            break;
+          default:
+            placeObj = new Place(data.name, data.location, data.description, data.image);
+        }
 
-        const prefix = prefixMap[province] || 'kch';
-        const imagePrefix = typeMap[type] || type.slice(0, 3);
-
-        document.getElementById('detailContent').innerHTML = `
-          <div class="place-detail">
-            <h2 id="placeName">${place.name}</h2>
-            <div class="gallery">
-              <img id="placeImage" src="https://raw.githubusercontent.com/Chai331/SarawakVibe/main/images/${prefix}${imagePrefix}${id + 1}.jpg" alt="${place.name}">
-            </div>
-            <p><strong>Introduction:</strong> ${place.features || place.description || 'No description available.'}</p>
-            <p><strong>Location:</strong> ${place.address || 'No address provided.'}</p>
-            <p><strong>Business Hours:</strong> ${place.businessHours || 'No business hours available.'}</p>
-            <p><strong>Contact:</strong> ${place.contact || 'No contact provided.'}</p>
-            <button class="rate-button" onclick="goRate()">⭐ Rate and Comment</button>
-          </div>
-        `;
+        placeObj.render(); // Polymorphic method call
       } catch (err) {
-        console.error("Error loading detail:", err);
-        document.getElementById('detailContent').innerHTML = '<p>Failed to load details.</p>';
+        console.error("Failed to load place:", err);
+        const container = document.getElementById('place-container');
+        container.innerHTML = `<p>Sorry, something went wrong while loading place details.</p>`;
       }
     }
 
-    function goBack() {
-      history.back();
-    }
-
-    function goRate() {
-      const placeName = document.getElementById('placeName')?.innerText;
-      if (!placeName) return;
-      window.location.href = `rate.html?place=${encodeURIComponent(placeName)}`;
-    }
-
-    loadDetail();
+    // Simulate loading the place
+    loadPlace(examplePlaceData);
   </script>
 </body>
 </html>
